@@ -137,18 +137,18 @@ export const en = {
       },
     },
     comparison: {
-      title: "Impact glass or shutters?",
+      title: "Impact Windows or Hurricane Panels?",
       subtitle:
-        "Both protect your openings. Only one does it every day, without lifting a finger.",
-      impact: "Impact windows",
-      shutters: "Hurricane shutters",
+        "Both protect your openings. The difference is how you prepare before a storm.",
+      impact: "Impact Windows",
+      shutters: "Hurricane Panels",
       rows: [
         { label: "Protection before a storm", impact: "Always in place", shutters: "Must be installed" },
-        { label: "Natural light during a storm", impact: "Yes", shutters: "Blocked" },
-        { label: "Everyday security", impact: "Laminated glass resists break-ins", shutters: "Only when closed" },
-        { label: "Noise reduction", impact: "Significant", shutters: "None" },
-        { label: "UV protection", impact: "Filters UV light", shutters: "None" },
-        { label: "Storage needed", impact: "None", shutters: "Panels or tracks" },
+        { label: "Natural light during a storm", impact: "Allows natural light in", shutters: "May be reduced or blocked, depending on the panel" },
+        { label: "Storm preparation", impact: "No additional installation needed", shutters: "Must be installed before the storm" },
+        { label: "Exterior noise reduction", impact: "May help reduce outside noise", shutters: "Not designed for noise reduction" },
+        { label: "UV protection", impact: "Available depending on the glass configuration", shutters: "Not their primary purpose" },
+        { label: "Storage space", impact: "No storage required", shutters: "May require storage space for the panels" },
       ],
     },
     process: {

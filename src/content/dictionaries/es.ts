@@ -139,18 +139,18 @@ export const es: Dictionary = {
       },
     },
     comparison: {
-      title: "¿Vidrio de impacto o paneles?",
+      title: "¿Ventanas de impacto o paneles anticiclónicos?",
       subtitle:
-        "Ambos protegen tus aberturas. Solo uno lo hace todos los días, sin mover un dedo.",
+        "Ambos protegen tus aberturas. La diferencia está en cómo te preparas antes de una tormenta.",
       impact: "Ventanas de impacto",
       shutters: "Paneles anticiclónicos",
       rows: [
-        { label: "Protección antes de una tormenta", impact: "Siempre instalada", shutters: "Hay que instalarlos" },
-        { label: "Luz natural durante la tormenta", impact: "Sí", shutters: "Bloqueada" },
-        { label: "Seguridad diaria", impact: "El vidrio laminado resiste robos", shutters: "Solo cuando están cerrados" },
-        { label: "Reducción de ruido", impact: "Significativa", shutters: "Ninguna" },
-        { label: "Protección UV", impact: "Filtra los rayos UV", shutters: "Ninguna" },
-        { label: "Espacio de almacenamiento", impact: "Ninguno", shutters: "Paneles o rieles" },
+        { label: "Protección antes de una tormenta", impact: "Siempre instalada", shutters: "Requieren instalación" },
+        { label: "Luz natural durante la tormenta", impact: "Mantiene la entrada de luz", shutters: "Puede reducirse o bloquearse, según el panel" },
+        { label: "Preparación previa", impact: "No requiere instalación adicional", shutters: "Deben colocarse antes de la tormenta" },
+        { label: "Reducción de ruido exterior", impact: "Puede ayudar a reducirlo", shutters: "No están diseñados para reducir ruido" },
+        { label: "Protección UV", impact: "Disponible según la configuración del vidrio", shutters: "No es su función principal" },
+        { label: "Espacio de almacenamiento", impact: "No requiere almacenamiento", shutters: "Puede requerir espacio para los paneles" },
       ],
     },
     process: {
