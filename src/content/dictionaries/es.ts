@@ -158,9 +158,9 @@ export const es: Dictionary = {
       steps: [
         { title: "Consulta gratis", body: "Visitamos tu casa, medimos cada abertura y te mostramos estilos, vidrios y marcos." },
         { title: "Cotización clara", body: "Una propuesta detallada y desglosada. Sin presión, sin sorpresas." },
-        { title: "Permisos y pedido", body: "Tramitamos los permisos y pedimos productos fabricados a la medida exacta." },
+        { title: "Permisos y pedido", body: "Facilitamos la obtención de permisos y pedimos productos fabricados a la medida exacta." },
         { title: "Instalación", body: "Nuestro equipo instala, sella y termina cada abertura, y deja tu casa limpia." },
-        { title: "Inspección final", body: "Coordinamos la inspección de la ciudad o condado y revisamos todo contigo." },
+        { title: "Inspección final", body: "Revisamos todo contigo una vez terminada la instalación y volvemos el día de la inspección final del condado o ciudad para acompañarte en el proceso." },
       ],
     },
     areas: {

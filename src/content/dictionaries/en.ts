@@ -156,9 +156,9 @@ export const en = {
       steps: [
         { title: "Free consultation", body: "We visit your home, measure every opening and walk you through styles, glass and frame options." },
         { title: "Clear quote", body: "A detailed, itemized proposal. No pressure, no surprises." },
-        { title: "Permits & ordering", body: "We handle permitting and order products built to your exact openings." },
+        { title: "Permits & ordering", body: "We help you obtain the permits and order products built to your exact openings." },
         { title: "Installation", body: "Our crew installs, seals and finishes each opening, and leaves your home clean." },
-        { title: "Final inspection", body: "We schedule the city or county inspection and walk through everything with you." },
+        { title: "Final inspection", body: "We walk through everything with you once installation is complete, and we come back on the day of the final city or county inspection to support you through the process." },
       ],
     },
     areas: {
