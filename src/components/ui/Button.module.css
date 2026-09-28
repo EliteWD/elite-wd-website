@@ -1,0 +1,87 @@
+.base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-text);
+  font-weight: 400;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Blue Purchase Pill */
+.primary {
+  background: var(--color-apple-blue);
+  color: var(--color-white);
+  border-radius: var(--radius-buttons);
+}
+
+.primary:hover {
+  background: var(--color-apple-blue-hover);
+}
+
+/* Outlined Explore Pill */
+.outline {
+  background: transparent;
+  color: var(--color-porcelain);
+  border-radius: var(--radius-pills);
+  box-shadow: inset 0 0 0 1px var(--color-slate);
+}
+
+.outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Outline on pale surfaces */
+.outlineLight {
+  background: transparent;
+  color: var(--color-cobalt-link);
+  border-radius: var(--radius-pills);
+  box-shadow: inset 0 0 0 1px var(--color-cobalt-link);
+}
+
+.outlineLight:hover {
+  background: rgba(0, 102, 204, 0.06);
+}
+
+/* Dark Pricing Capsule — informational, not a control */
+.capsule {
+  background: var(--color-capsule);
+  color: var(--color-nav-text);
+  border-radius: var(--radius-compactbuttons);
+  cursor: default;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.compact {
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+}
+
+.regular {
+  padding: 11px 22px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.224px;
+}
+
+.large {
+  padding: 14px 28px;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: -0.374px;
+}
+
+.block {
+  width: 100%;
+}
+
+.base:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}

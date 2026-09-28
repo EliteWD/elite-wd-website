@@ -1,0 +1,594 @@
+/* ---------- Section shells ---------- */
+.section {
+  padding-block: clamp(90px, 11vw, 144px);
+}
+
+.sectionTight {
+  padding-block: clamp(48px, 7vw, 90px);
+}
+
+.obsidian {
+  background: var(--color-obsidian);
+}
+
+.carbon {
+  background: var(--gradient-carbon);
+}
+
+.carbonFlat {
+  background: var(--color-carbon);
+}
+
+.porcelain {
+  background: var(--color-porcelain);
+  color: var(--color-carbon);
+}
+
+.header {
+  max-width: 820px;
+  margin-bottom: clamp(32px, 5vw, 48px);
+}
+
+.headerCenter {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.header p {
+  margin-top: 16px;
+  color: var(--color-ash);
+}
+
+.porcelain .header p {
+  color: var(--color-slate);
+}
+
+/* ---------- Hero Product Stage ---------- */
+.stage {
+  position: relative;
+  background: var(--color-obsidian);
+  overflow: hidden;
+  text-align: center;
+  padding-top: clamp(40px, 6vw, 72px);
+  padding-bottom: clamp(56px, 7vw, 90px);
+}
+
+.stageVisual {
+  height: clamp(280px, 52svh, 600px);
+  max-width: 88vw;
+  margin: 0 auto;
+  aspect-ratio: 8 / 9;
+}
+
+.stageVisualWide {
+  max-width: 92vw;
+}
+
+.stageVisual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stageCopy {
+  position: relative;
+  margin-top: clamp(-96px, -8svh, -32px);
+  padding-inline: var(--gutter);
+}
+
+.stageLabel {
+  color: var(--color-porcelain);
+}
+
+.stageTitle {
+  margin-top: 8px;
+  white-space: pre-line;
+  color: var(--color-porcelain);
+}
+
+.stageSubtitle {
+  margin: 20px auto 0;
+  max-width: 620px;
+  color: var(--color-ash);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Text-only page hero (no visual) */
+.pageHero {
+  padding-top: clamp(72px, 10vw, 144px);
+  padding-bottom: clamp(48px, 6vw, 90px);
+  text-align: center;
+}
+
+.pageHero .stageSubtitle {
+  margin-top: 24px;
+}
+
+/* ---------- Highlights Media Frame ---------- */
+.media {
+  position: relative;
+  border-radius: var(--radius-images);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--color-obsidian);
+  isolation: isolate;
+}
+
+.media > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.mediaCopy {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: clamp(24px, 4vw, 56px);
+  max-width: 760px;
+}
+
+.mediaCopy p:first-child {
+  color: var(--color-ash);
+  margin-bottom: 12px;
+}
+
+.mediaCopy p:last-child {
+  color: var(--color-porcelain);
+  margin-top: 16px;
+  max-width: 560px;
+}
+
+@media (max-width: 733px) {
+  .media {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ---------- Feature Metric Tiles ---------- */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--section-gap);
+}
+
+/* Cards sit on Carbon so they separate from the black stage (the Carbon
+   band gradient fades to black within 288px, so black cards would vanish). */
+.tile {
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 240px;
+}
+
+.tileVisual {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+}
+
+.tileVisual svg {
+  width: 100%;
+  max-width: 260px;
+}
+
+.tileStat {
+  color: var(--color-porcelain);
+  margin-top: auto;
+}
+
+.tileLabel {
+  color: var(--color-porcelain);
+  font-weight: 600;
+}
+
+.tileBody {
+  color: var(--color-ash);
+}
+
+.tileWide {
+  grid-column: span 2;
+}
+
+@media (max-width: 1068px) {
+  .tiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 733px) {
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .tileWide {
+    grid-column: auto;
+  }
+}
+
+/* ---------- Product cards ---------- */
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--section-gap);
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(32px, 4vw, 56px) clamp(20px, 3vw, 40px) 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: 0 0 0 1px var(--color-steel);
+}
+
+.product h3 {
+  color: var(--color-porcelain);
+}
+
+.productTagline {
+  margin-top: 8px;
+  color: var(--color-porcelain);
+}
+
+.productBody {
+  margin-top: 12px;
+  color: var(--color-ash);
+  max-width: 380px;
+}
+
+.productActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.productVisual {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 16px;
+  aspect-ratio: 8 / 7;
+  overflow: hidden;
+}
+
+.productVisual svg {
+  width: 100%;
+}
+
+@media (max-width: 833px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Comparison panel ---------- */
+.panel {
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(32px, 5vw, 72px) clamp(20px, 4vw, 56px);
+}
+
+.panel .header {
+  margin-bottom: 32px;
+}
+
+.paleCard {
+  background: var(--surface-white-comparison);
+  color: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: var(--card-padding);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.224px;
+}
+
+.table th,
+.table td {
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e8e8ed;
+}
+
+.table tr:last-child th,
+.table tr:last-child td {
+  border-bottom: 0;
+}
+
+.table thead th {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.228px;
+  line-height: 1.21;
+}
+
+.table tbody th {
+  font-weight: 600;
+  width: 34%;
+}
+
+.table .yes {
+  color: var(--color-carbon);
+  font-weight: 600;
+}
+
+.table .no {
+  color: var(--color-slate);
+}
+
+.check {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: -3px;
+  color: var(--color-cobalt-link);
+}
+
+/* ---------- Process steps ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--section-gap);
+  counter-reset: step;
+}
+
+.step {
+  counter-increment: step;
+  border-top: 1px solid var(--color-steel);
+  padding-top: 24px;
+}
+
+.step::before {
+  content: counter(step, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--color-electric-link);
+  margin-bottom: 20px;
+}
+
+.step h3 {
+  color: var(--color-porcelain);
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: var(--color-ash);
+}
+
+@media (max-width: 1068px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 733px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Service areas ---------- */
+.counties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--section-gap);
+}
+
+.county {
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(24px, 3vw, 40px);
+}
+
+.county h3 {
+  color: var(--color-porcelain);
+  margin-bottom: 20px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 7px 14px;
+  border-radius: var(--radius-pills);
+  box-shadow: inset 0 0 0 1px var(--color-steel);
+  color: var(--color-porcelain);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.224px;
+}
+
+.areasFooter {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--color-ash);
+}
+
+@media (max-width: 833px) {
+  .counties {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--color-steel);
+}
+
+.faqItem summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  color: var(--color-porcelain);
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqIcon {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--color-steel);
+  transition: transform 0.3s ease;
+}
+
+.faqItem[open] .faqIcon {
+  transform: rotate(45deg);
+}
+
+.faqItem p {
+  padding: 0 48px 28px 0;
+  color: var(--color-ash);
+}
+
+/* ---------- CTA band ---------- */
+.cta {
+  text-align: center;
+}
+
+.cta p {
+  margin-top: 16px;
+  color: var(--color-ash);
+}
+
+/* ---------- Option grid (styles, glass, frames, values) ---------- */
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--section-gap);
+}
+
+.options2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.options4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.option {
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option h3 {
+  color: var(--color-porcelain);
+}
+
+.option p {
+  color: var(--color-ash);
+}
+
+.optionIndex {
+  color: var(--color-ash);
+}
+
+.note {
+  margin-top: 24px;
+  color: var(--color-ash);
+  text-align: center;
+}
+
+@media (max-width: 1068px) {
+  .options,
+  .options4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 733px) {
+  .options,
+  .options2,
+  .options4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Split (text + media) ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 90px);
+  align-items: center;
+}
+
+.split p {
+  color: var(--color-ash);
+  margin-top: 20px;
+}
+
+.splitVisual {
+  background: var(--color-carbon);
+  border-radius: var(--radius-images);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.splitVisual svg {
+  width: 72%;
+}
+
+@media (max-width: 833px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
