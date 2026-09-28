@@ -50,7 +50,7 @@ export const es: Dictionary = {
     windows: {
       title: "Ventanas de impacto",
       description:
-        "Ventanas de impacto para hogares del suroeste de Florida: single-hung, correderas, casement, fijas y formas a medida, con vidrio laminado y eficiente.",
+        "Ventanas de impacto para hogares del suroeste de Florida: single-hung, correderas, fijas y formas a medida, con vidrio laminado y eficiente.",
     },
     doors: {
       title: "Puertas de impacto",
@@ -130,7 +130,7 @@ export const es: Dictionary = {
       windows: {
         name: "Ventanas de impacto",
         tagline: "Claridad que no cede.",
-        body: "Single-hung, correderas horizontales, casement, fijas y formas arquitectónicas a medida.",
+        body: "Single-hung, correderas horizontales, fijas y formas arquitectónicas a medida.",
       },
       doors: {
         name: "Puertas de impacto",
@@ -235,7 +235,6 @@ export const es: Dictionary = {
       items: [
         { name: "Single-hung", body: "Hoja superior fija y hoja inferior que abre. Clásica, limpia y económica." },
         { name: "Corredera horizontal", body: "Hojas que se deslizan de lado a lado, ideales para aberturas anchas." },
-        { name: "Casement", body: "Con bisagra lateral, abre por completo para máxima ventilación." },
         { name: "Ventana fija", body: "Un vidrio fijo y sin interrupciones que enmarca la vista." },
         { name: "Awning", body: "Con bisagra superior, puede quedar abierta durante una lluvia ligera." },
         { name: "Formas a medida", body: "Arcos, inclinadas y formas geométricas para aberturas arquitectónicas." },

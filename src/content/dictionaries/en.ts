@@ -48,7 +48,7 @@ export const en = {
     windows: {
       title: "Impact Windows",
       description:
-        "Hurricane impact windows for Southwest Florida homes — single-hung, horizontal roller, casement, picture and custom shapes with laminated, energy-efficient glass.",
+        "Hurricane impact windows for Southwest Florida homes — single-hung, horizontal roller, picture and custom shapes with laminated, energy-efficient glass.",
     },
     doors: {
       title: "Impact Doors",
@@ -128,7 +128,7 @@ export const en = {
       windows: {
         name: "Impact Windows",
         tagline: "Clarity that holds its ground.",
-        body: "Single-hung, horizontal roller, casement, picture and custom architectural shapes.",
+        body: "Single-hung, horizontal roller, picture and custom architectural shapes.",
       },
       doors: {
         name: "Impact Doors",
@@ -233,7 +233,6 @@ export const en = {
       items: [
         { name: "Single-hung", body: "A fixed top sash and an operable bottom sash. Classic, clean and economical." },
         { name: "Horizontal roller", body: "Sashes that glide side to side — ideal for wide openings." },
-        { name: "Casement", body: "Hinged on the side and cranks open fully for maximum ventilation." },
         { name: "Picture window", body: "A fixed, uninterrupted pane that frames the view." },
         { name: "Awning", body: "Hinged at the top, so it can stay open during a light rain." },
         { name: "Custom shapes", body: "Arches, rakes and geometric shapes for architectural openings." },
