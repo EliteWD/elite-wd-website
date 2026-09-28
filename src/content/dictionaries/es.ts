@@ -122,11 +122,6 @@ export const es: Dictionary = {
           label: "Vidrio eficiente",
           body: "Los recubrimientos de baja emisividad ayudan a mantener el calor afuera y el aire acondicionado adentro.",
         },
-        {
-          stat: "Permisos",
-          label: "Nosotros nos encargamos",
-          body: "Tramitamos los permisos y coordinamos las inspecciones con tu ciudad o condado.",
-        },
       ],
     },
     products: {

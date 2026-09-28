@@ -120,11 +120,6 @@ export const en = {
           label: "Energy-efficient glass",
           body: "Low-emissivity coatings help keep heat out and air conditioning in.",
         },
-        {
-          stat: "Permits",
-          label: "Handled for you",
-          body: "We pull permits and schedule inspections with your city or county.",
-        },
       ],
     },
     products: {
