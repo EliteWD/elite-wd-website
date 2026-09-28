@@ -83,9 +83,9 @@ export const es: Dictionary = {
       capsule: "Estimado gratis en casa",
     },
     trust: [
-      { stat: "+15 años", label: "de experiencia en el sector" },
+      { stat: "Equipo", label: "con más de 15 años de experiencia" },
       { stat: "Registrada", label: "y totalmente asegurada" },
-      { stat: "Aprobados", label: "con Florida Product Approval" },
+      { stat: "100%", label: "de los proyectos con el dueño e instalador líder en obra" },
       { stat: "Fabricantes", label: "líderes del mercado" },
     ],
     highlight: {

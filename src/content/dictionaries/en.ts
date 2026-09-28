@@ -81,9 +81,9 @@ export const en = {
       capsule: "Free in-home estimate",
     },
     trust: [
-      { stat: "15+ years", label: "of industry experience" },
+      { stat: "Team", label: "with 15+ years of experience" },
       { stat: "Registered", label: "and fully insured" },
-      { stat: "Florida", label: "Product Approved" },
+      { stat: "100%", label: "of projects with the owner and lead installer on site" },
       { stat: "Leading", label: "manufacturers" },
     ],
     highlight: {
