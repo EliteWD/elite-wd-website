@@ -45,7 +45,7 @@ export const es: Dictionary = {
     home: {
       title: "Ventanas y puertas de impacto en el suroeste de Florida",
       description:
-        "Ventanas y puertas de impacto contra huracanes instaladas en Cape Coral, Fort Myers, Naples y todo el suroeste de Florida. Más de 15 años de experiencia en el sector. Empresa registrada y asegurada. Estimados gratis en casa.",
+        "Ventanas y puertas de impacto contra huracanes instaladas en Cape Coral, Fort Myers, Naples y todo el suroeste de Florida. Más de 15 años de experiencia acumulada por nuestro equipo. Cada proyecto con supervisión directa del dueño. Empresa registrada y asegurada. Estimados gratis en casa.",
     },
     windows: {
       title: "Ventanas de impacto",
@@ -65,7 +65,7 @@ export const es: Dictionary = {
     about: {
       title: "Nosotros",
       description:
-        "Una empresa registrada y asegurada del suroeste de Florida, con más de 15 años de experiencia en el sector, especializada en la venta e instalación de ventanas y puertas de impacto.",
+        "Una empresa registrada y asegurada del suroeste de Florida, con más de 15 años de experiencia acumulada por su equipo, especializada en la venta e instalación de ventanas y puertas de impacto. Cada proyecto cuenta con supervisión directa del dueño.",
     },
     contact: {
       title: "Estimado gratis",
@@ -83,9 +83,9 @@ export const es: Dictionary = {
       capsule: "Estimado gratis en casa",
     },
     trust: [
-      { stat: "Equipo", label: "con más de 15 años de experiencia" },
+      { stat: "+15 años", label: "de experiencia acumulada por nuestro equipo" },
       { stat: "Registrada", label: "y totalmente asegurada" },
-      { stat: "100%", label: "de los proyectos con el dueño e instalador líder en obra" },
+      { stat: "100%", label: "de los proyectos con supervisión directa del dueño" },
       { stat: "Fabricantes", label: "líderes del mercado" },
     ],
     highlight: {
@@ -327,7 +327,7 @@ export const es: Dictionary = {
     },
     credentials: {
       title: "Experiencia en la que puedes confiar.",
-      body: "Más de 15 años en el sector, una empresa registrada y asegurada, y acceso a una amplia variedad de fabricantes para ofrecerte la solución ideal para tu hogar.",
+      body: "Más de 15 años de experiencia acumulada por nuestro equipo, supervisión directa del dueño en cada proyecto, una empresa registrada y asegurada, y acceso a una amplia variedad de fabricantes para ofrecerte la solución ideal para tu hogar.",
     },
     story: {
       title: "Por qué lo hacemos.",

@@ -43,7 +43,7 @@ export const en = {
     home: {
       title: "Impact Windows & Doors in Southwest Florida",
       description:
-        "Hurricane impact windows and doors installed in Cape Coral, Fort Myers, Naples and across Southwest Florida. 15+ years of industry experience. Registered & insured. Free in-home estimates.",
+        "Hurricane impact windows and doors installed in Cape Coral, Fort Myers, Naples and across Southwest Florida. 15+ years of combined team experience. Every project directly supervised by the owner. Registered & insured. Free in-home estimates.",
     },
     windows: {
       title: "Impact Windows",
@@ -63,7 +63,7 @@ export const en = {
     about: {
       title: "About Us",
       description:
-        "A registered and insured Southwest Florida team with 15+ years of industry experience in the sale and installation of hurricane impact windows and doors.",
+        "A registered and insured Southwest Florida team with 15+ years of combined experience in the sale and installation of hurricane impact windows and doors. Every project is directly supervised by the owner.",
     },
     contact: {
       title: "Free Estimate",
@@ -81,9 +81,9 @@ export const en = {
       capsule: "Free in-home estimate",
     },
     trust: [
-      { stat: "Team", label: "with 15+ years of experience" },
+      { stat: "15+ years", label: "of combined experience across our team" },
       { stat: "Registered", label: "and fully insured" },
-      { stat: "100%", label: "of projects with the owner and lead installer on site" },
+      { stat: "100%", label: "of projects directly supervised by the owner" },
       { stat: "Leading", label: "manufacturers" },
     ],
     highlight: {
@@ -325,7 +325,7 @@ export const en = {
     },
     credentials: {
       title: "Experience you can count on.",
-      body: "More than 15 years in the industry, a registered and insured company, and access to a wide range of manufacturers to deliver the right solution for your home.",
+      body: "15+ years of combined experience across our team, the owner directly supervising every project, a registered and insured company, and access to a wide range of manufacturers to deliver the right solution for your home.",
     },
     story: {
       title: "Why we do this.",
