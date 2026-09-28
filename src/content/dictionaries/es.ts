@@ -36,9 +36,8 @@ export const es: Dictionary = {
       contact: "Contacto",
       areas: "Áreas que servimos",
       license: "Licencia FL",
-      insured: "Con licencia y asegurados",
+      registeredInsured: "Empresa registrada y asegurada",
       rights: "Todos los derechos reservados.",
-      hours: "Horario",
     },
   },
 
@@ -46,7 +45,7 @@ export const es: Dictionary = {
     home: {
       title: "Ventanas y puertas de impacto en el suroeste de Florida",
       description:
-        "Ventanas y puertas de impacto contra huracanes, instaladas profesionalmente en Fort Myers, Cape Coral, Naples y todo el suroeste de Florida. Permisos incluidos. Estimados gratis en casa.",
+        "Ventanas y puertas de impacto contra huracanes instaladas en Cape Coral, Fort Myers, Naples y todo el suroeste de Florida. Más de 15 años de experiencia en el sector. Empresa registrada y asegurada. Estimados gratis en casa.",
     },
     windows: {
       title: "Ventanas de impacto",
@@ -66,7 +65,7 @@ export const es: Dictionary = {
     about: {
       title: "Nosotros",
       description:
-        "Un equipo local del suroeste de Florida especializado en la venta e instalación de ventanas y puertas de impacto contra huracanes.",
+        "Una empresa registrada y asegurada del suroeste de Florida, con más de 15 años de experiencia en el sector, especializada en la venta e instalación de ventanas y puertas de impacto.",
     },
     contact: {
       title: "Estimado gratis",
@@ -83,6 +82,12 @@ export const es: Dictionary = {
         "Vidrio certificado contra huracanes, instalado con precisión en todo el suroeste de Florida.",
       capsule: "Estimado gratis en casa",
     },
+    trust: [
+      { stat: "+15 años", label: "de experiencia en el sector" },
+      { stat: "Registrada", label: "y totalmente asegurada" },
+      { stat: "Aprobados", label: "con Florida Product Approval" },
+      { stat: "Fabricantes", label: "líderes del mercado" },
+    ],
     highlight: {
       eyebrow: "Protección que nunca hay que instalar",
       title: "Cuando sube el viento, adentro nada cambia.",
@@ -98,8 +103,8 @@ export const es: Dictionary = {
           body: "Los productos cuentan con Aprobación de Producto de Florida para las presiones e impactos de un huracán.",
         },
         {
-          stat: "Hasta 99%",
-          label: "Bloqueo de rayos UV",
+          stat: "Filtro UV",
+          label: "Protege tus interiores",
           body: "La capa laminada filtra la luz ultravioleta que decolora pisos y muebles.",
         },
         {
@@ -126,6 +131,7 @@ export const es: Dictionary = {
     },
     products: {
       title: "Elige tu protección.",
+      body: "Trabajamos con una amplia variedad de fabricantes líderes, para que cada recomendación se elija pensando en tu hogar y no en el catálogo de una sola marca.",
       windows: {
         name: "Ventanas de impacto",
         tagline: "Claridad que no cede.",
@@ -148,7 +154,7 @@ export const es: Dictionary = {
         { label: "Luz natural durante la tormenta", impact: "Sí", shutters: "Bloqueada" },
         { label: "Seguridad diaria", impact: "El vidrio laminado resiste robos", shutters: "Solo cuando están cerrados" },
         { label: "Reducción de ruido", impact: "Significativa", shutters: "Ninguna" },
-        { label: "Protección UV", impact: "Hasta 99%", shutters: "Ninguna" },
+        { label: "Protección UV", impact: "Filtra los rayos UV", shutters: "Ninguna" },
         { label: "Espacio de almacenamiento", impact: "Ninguno", shutters: "Paneles o rieles" },
       ],
     },
@@ -172,6 +178,10 @@ export const es: Dictionary = {
         {
           q: "¿Qué hace que una ventana sea “de impacto”?",
           a: "Las ventanas de impacto usan vidrio laminado —dos vidrios unidos a una capa intermedia resistente— en un marco reforzado. El conjunto se prueba contra escombros arrastrados por el viento y ciclos repetidos de presión, y el vidrio permanece en el marco aunque se agriete.",
+        },
+        {
+          q: "¿Con qué marcas trabajan?",
+          a: "Trabajamos con una variedad de fabricantes líderes de ventanas y puertas de impacto. En lugar de imponer una sola marca, te recomendamos el producto que mejor se adapta a las aberturas, el estilo y el presupuesto de tu hogar, siempre con Aprobación de Producto de Florida.",
         },
         {
           q: "¿Necesito permiso para cambiar ventanas o puertas?",
@@ -285,6 +295,10 @@ export const es: Dictionary = {
       title: "Locales. Enfocados. Precisos.",
       subtitle: "Una sola especialidad: proteger los hogares del suroeste de Florida con ventanas y puertas de impacto.",
     },
+    credentials: {
+      title: "Experiencia en la que puedes confiar.",
+      body: "Más de 15 años en el sector, una empresa registrada y asegurada, y acceso a una amplia variedad de fabricantes para ofrecerte la solución ideal para tu hogar.",
+    },
     story: {
       title: "Por qué lo hacemos.",
       // TODO: reemplazar con la historia real de la empresa.
@@ -313,7 +327,6 @@ export const es: Dictionary = {
       title: "¿Prefieres hablar?",
       phone: "Teléfono",
       email: "Correo",
-      hours: "Horario",
       area: "Área de servicio",
     },
     form: {

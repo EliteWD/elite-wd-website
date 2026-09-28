@@ -111,6 +111,57 @@
   margin-top: 24px;
 }
 
+/* ---------- Trust bar (credentials row) ---------- */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--color-steel);
+  border-bottom: 1px solid var(--color-steel);
+}
+
+.trustItem {
+  padding: 28px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trustItem + .trustItem {
+  border-left: 1px solid var(--color-steel);
+}
+
+.trustStat {
+  color: var(--color-porcelain);
+}
+
+.trustLabel {
+  color: var(--color-ash);
+}
+
+@media (max-width: 833px) {
+  .trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trustItem:nth-child(3) {
+    border-left: 0;
+  }
+
+  .trustItem:nth-child(n + 3) {
+    border-top: 1px solid var(--color-steel);
+  }
+
+  .trustItem {
+    padding: 24px 12px;
+  }
+
+  .trustStat {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}
+
 /* ---------- Highlights Media Frame ---------- */
 .media {
   position: relative;

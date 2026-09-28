@@ -49,10 +49,6 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
                 <dd><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></dd>
               </div>
               <div>
-                <dt>{t.info.hours}</dt>
-                <dd className="t-small">{site.hours[lang]}</dd>
-              </div>
-              <div>
                 <dt>{t.info.area}</dt>
                 <dd className="t-small">{counties}</dd>
               </div>

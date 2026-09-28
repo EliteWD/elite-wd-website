@@ -34,9 +34,8 @@ export const en = {
       contact: "Contact",
       areas: "Areas we serve",
       license: "FL License",
-      insured: "Licensed & insured",
+      registeredInsured: "Registered & insured",
       rights: "All rights reserved.",
-      hours: "Hours",
     },
   },
 
@@ -44,7 +43,7 @@ export const en = {
     home: {
       title: "Impact Windows & Doors in Southwest Florida",
       description:
-        "Hurricane impact windows and doors, professionally installed in Fort Myers, Cape Coral, Naples and across Southwest Florida. Permits handled. Free in-home estimates.",
+        "Hurricane impact windows and doors installed in Cape Coral, Fort Myers, Naples and across Southwest Florida. 15+ years of industry experience. Registered & insured. Free in-home estimates.",
     },
     windows: {
       title: "Impact Windows",
@@ -64,7 +63,7 @@ export const en = {
     about: {
       title: "About Us",
       description:
-        "A local Southwest Florida team specializing in the sale and installation of hurricane impact windows and doors.",
+        "A registered and insured Southwest Florida team with 15+ years of industry experience in the sale and installation of hurricane impact windows and doors.",
     },
     contact: {
       title: "Free Estimate",
@@ -81,6 +80,12 @@ export const en = {
         "Hurricane-rated glass, precisely installed across Southwest Florida.",
       capsule: "Free in-home estimate",
     },
+    trust: [
+      { stat: "15+ years", label: "of industry experience" },
+      { stat: "Registered", label: "and fully insured" },
+      { stat: "Florida", label: "Product Approved" },
+      { stat: "Leading", label: "manufacturers" },
+    ],
     highlight: {
       eyebrow: "Protection that never needs deploying",
       title: "When the wind rises, nothing changes inside.",
@@ -96,8 +101,8 @@ export const en = {
           body: "Products carry Florida Product Approval for the pressures and impacts of a hurricane.",
         },
         {
-          stat: "Up to 99%",
-          label: "UV blocked",
+          stat: "UV filter",
+          label: "Protects your interiors",
           body: "The laminated interlayer filters ultraviolet light that fades floors and furniture.",
         },
         {
@@ -124,6 +129,7 @@ export const en = {
     },
     products: {
       title: "Choose your protection.",
+      body: "We partner with a range of leading manufacturers, so every recommendation is chosen for your home — not for a single brand's catalog.",
       windows: {
         name: "Impact Windows",
         tagline: "Clarity that holds its ground.",
@@ -146,7 +152,7 @@ export const en = {
         { label: "Natural light during a storm", impact: "Yes", shutters: "Blocked" },
         { label: "Everyday security", impact: "Laminated glass resists break-ins", shutters: "Only when closed" },
         { label: "Noise reduction", impact: "Significant", shutters: "None" },
-        { label: "UV protection", impact: "Up to 99%", shutters: "None" },
+        { label: "UV protection", impact: "Filters UV light", shutters: "None" },
         { label: "Storage needed", impact: "None", shutters: "Panels or tracks" },
       ],
     },
@@ -170,6 +176,10 @@ export const en = {
         {
           q: "What makes a window “impact” rated?",
           a: "Impact windows use laminated glass — two panes bonded to a strong interlayer — set in a reinforced frame. The assembly is tested to withstand wind-borne debris and repeated pressure cycles, and the glass stays in the frame even if it cracks.",
+        },
+        {
+          q: "Which brands do you install?",
+          a: "We work with a variety of leading impact window and door manufacturers. Rather than pushing a single brand, we recommend the product that best fits your home's openings, style and budget — every one of them Florida Product Approved.",
         },
         {
           q: "Do I need a permit to replace windows or doors?",
@@ -283,6 +293,10 @@ export const en = {
       title: "Local. Focused. Precise.",
       subtitle: "One specialty: protecting Southwest Florida homes with impact windows and doors.",
     },
+    credentials: {
+      title: "Experience you can count on.",
+      body: "More than 15 years in the industry, a registered and insured company, and access to a wide range of manufacturers to deliver the right solution for your home.",
+    },
     story: {
       title: "Why we do this.",
       // TODO: replace with the company's real story.
@@ -311,7 +325,6 @@ export const en = {
       title: "Prefer to talk?",
       phone: "Phone",
       email: "Email",
-      hours: "Hours",
       area: "Service area",
     },
     form: {

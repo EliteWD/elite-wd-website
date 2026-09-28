@@ -40,9 +40,10 @@ export function pageMetadata(
 
 /** schema.org LocalBusiness data for search engines. Omits unknown fields. */
 export function localBusinessJsonLd(lang: Locale, description: string) {
-  const { address, contact, social } = site;
+  const { contact, social, region } = site;
   const sameAs = Object.values(social).filter(Boolean);
 
+  // Service-area business: region only, no street address.
   return {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -50,22 +51,20 @@ export function localBusinessJsonLd(lang: Locale, description: string) {
     name: site.name,
     description,
     url: `${site.url}${href(lang, "home")}`,
+    logo: `${site.url}/brand/logo-stacked-black.png`,
+    image: `${site.url}/opengraph-image.png`,
     telephone: contact.phoneHref,
     email: contact.email,
     inLanguage: lang === "en" ? "en-US" : "es-US",
     address: {
       "@type": "PostalAddress",
-      ...(address.street && { streetAddress: address.street }),
-      addressLocality: address.city,
-      addressRegion: address.region,
-      ...(address.postalCode && { postalCode: address.postalCode }),
-      addressCountry: address.country,
+      addressRegion: region.state,
+      addressCountry: region.country,
     },
     areaServed: allCities.map((city) => ({
       "@type": "City",
-      name: `${city}, FL`,
+      name: `${city}, ${region.state}`,
     })),
-    openingHours: site.hours.schema,
     ...(sameAs.length > 0 && { sameAs }),
   };
 }

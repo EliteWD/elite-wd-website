@@ -2,7 +2,7 @@ import Link from "next/link";
 import { href, switchLocalePath, type Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/content/dictionaries";
 import { site, allCities } from "@/content/site";
-import { Logo } from "./Logo";
+import { LogoStacked } from "./Logo";
 import styles from "./Chrome.module.css";
 
 const socialLabels: Record<keyof typeof site.social, string> = {
@@ -25,7 +25,7 @@ export function Footer({ lang, common }: { lang: Locale; common: Dictionary["com
       <div className="container">
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <Logo />
+            <LogoStacked width={132} />
             <p>{footer.tagline}</p>
           </div>
 
@@ -58,7 +58,7 @@ export function Footer({ lang, common }: { lang: Locale; common: Dictionary["com
             <ul className={styles.footerList}>
               <li><a href={`tel:${site.contact.phoneHref}`}>{site.contact.phone}</a></li>
               <li><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
-              <li>{site.hours[lang]}</li>
+              <li>{site.region.name}</li>
             </ul>
           </div>
         </div>
@@ -71,8 +71,8 @@ export function Footer({ lang, common }: { lang: Locale; common: Dictionary["com
         <div className={styles.footerBottom}>
           <span>
             © {year} {site.name}. {footer.rights}
+            {site.registered && site.insured && ` ${footer.registeredInsured}.`}
             {site.license && ` ${footer.license} ${site.license}.`}
-            {site.insured && ` ${footer.insured}.`}
           </span>
           <Link href={switchLocalePath(href(lang, "home"), otherLang)} hrefLang={otherLang} lang={otherLang}>
             {common.language.switchTo}

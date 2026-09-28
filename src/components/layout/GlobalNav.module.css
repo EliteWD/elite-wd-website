@@ -18,12 +18,13 @@
 }
 
 .logo {
-  color: #cccccc;
-  transition: color 0.2s ease;
+  display: inline-flex;
+  flex: none;
+  transition: opacity 0.2s ease;
 }
 
 .logo:hover {
-  color: var(--color-white);
+  opacity: 0.85;
 }
 
 .links {

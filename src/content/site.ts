@@ -1,9 +1,8 @@
 /**
  * Business configuration — the ONE place to edit company facts.
  *
- * Every value marked `TODO` is a placeholder until the real business data is
- * supplied. Pages, footer, SEO metadata and structured data (JSON-LD) all read
- * from here, so each fact only ever needs to be changed once.
+ * Pages, footer, SEO metadata and structured data (JSON-LD) all read from
+ * here, so each fact only ever needs to be changed once.
  */
 
 export type ServiceArea = {
@@ -12,51 +11,32 @@ export type ServiceArea = {
 };
 
 export const site = {
-  // TODO: legal / brand name
-  name: "Company Name",
-  // TODO: short name used in the nav wordmark
-  shortName: "Company",
+  name: "Elite W&D Installers LLC",
+  shortName: "Elite W&D Installers",
   // TODO: production URL (used for canonical URLs, sitemap and hreflang)
   url: "https://www.example.com",
 
   contact: {
-    // TODO: real phone. `phoneHref` must be E.164 (+1XXXXXXXXXX).
-    phone: "(239) 555-0100",
-    phoneHref: "+12395550100",
-    // TODO: real email
-    email: "info@example.com",
-    // TODO: WhatsApp number in E.164 without "+" (leave empty to hide)
+    phone: "(305) 963-8935",
+    phoneHref: "+13059638935",
+    email: "carlosquinonesalfonso@gmail.com",
+    // WhatsApp number in E.164 without "+" (empty = hidden)
     whatsapp: "",
   },
 
-  // TODO: real address. Leave `street` empty to show only the city/region.
-  address: {
-    street: "",
-    city: "Fort Myers",
-    region: "FL",
-    postalCode: "",
-    country: "US",
-  },
+  /**
+   * Service-area business: no street address is published. Only the region
+   * is used, for structured data.
+   */
+  region: { name: "Southwest Florida", state: "FL", country: "US" },
 
-  // TODO: real opening hours
-  hours: {
-    en: "Mon – Fri 8:00 AM – 5:00 PM · Sat by appointment",
-    es: "Lun – Vie 8:00 AM – 5:00 PM · Sáb con cita",
-    // schema.org format for structured data
-    schema: ["Mo-Fr 08:00-17:00"],
-  },
-
-  // TODO: Florida contractor license number (shown in footer — required on advertising in FL)
+  // Registered and insured (shown in footer, about page and structured data).
+  registered: true,
+  insured: true,
+  // Florida contractor license number — shown in the footer when set.
   license: "",
-  // TODO: set true only if the business carries general liability + workers' comp
-  insured: false,
-  // TODO: year founded (leave null to hide "years of experience")
-  foundedYear: null as number | null,
 
-  // TODO: confirm the brands actually installed
-  brands: [] as string[],
-
-  // TODO: social profile URLs (empty string = hidden)
+  // Social profile URLs (empty string = hidden). None yet.
   social: {
     facebook: "",
     instagram: "",
@@ -67,23 +47,15 @@ export const site = {
   serviceAreas: [
     {
       county: "Lee County",
-      cities: [
-        "Fort Myers",
-        "Cape Coral",
-        "Bonita Springs",
-        "Estero",
-        "Lehigh Acres",
-        "Sanibel",
-        "Fort Myers Beach",
-      ],
+      cities: ["Cape Coral", "Fort Myers", "Lehigh Acres", "Bonita Springs", "Estero"],
     },
     {
       county: "Collier County",
-      cities: ["Naples", "Marco Island", "Golden Gate", "Ave Maria"],
+      cities: ["Naples"],
     },
     {
       county: "Charlotte County",
-      cities: ["Punta Gorda", "Port Charlotte"],
+      cities: ["Port Charlotte", "Punta Gorda"],
     },
   ] as ServiceArea[],
 
@@ -96,7 +68,3 @@ export const site = {
 };
 
 export const allCities = site.serviceAreas.flatMap((area) => area.cities);
-
-export const yearsInBusiness = site.foundedYear
-  ? new Date().getFullYear() - site.foundedYear
-  : null;

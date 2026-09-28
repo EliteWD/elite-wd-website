@@ -18,6 +18,7 @@ import {
   SectionHeader,
   ServiceAreas,
   StageHero,
+  TrustBar,
 } from "@/components/sections/Sections";
 import { OpeningRender } from "@/components/visuals/OpeningRender";
 import { GlassSection } from "@/components/visuals/GlassSection";
@@ -57,6 +58,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       />
 
       <Section surface="obsidian" tight>
+        <TrustBar items={home.trust} />
+        <div style={{ height: "clamp(48px, 7vw, 90px)" }} aria-hidden="true" />
         <MediaFrame
           eyebrow={home.highlight.eyebrow}
           title={home.highlight.title}
@@ -71,7 +74,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </Section>
 
       <Section surface="obsidian" labelledBy="products-title">
-        <SectionHeader id="products-title" title={home.products.title} center />
+        <SectionHeader id="products-title" title={home.products.title} body={home.products.body} center />
         <ProductCards
           items={[
             {

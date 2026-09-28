@@ -1,14 +1,34 @@
+import Image from "next/image";
 import { site } from "@/content/site";
+import mark from "../../../public/brand/logo-mark.png";
+import wordmarkWhite from "../../../public/brand/wordmark-white.png";
+import stackedWhite from "../../../public/brand/logo-stacked-white.png";
 
-/** Placeholder lockup: a four-lite window mark + wordmark. Replace with the real logo SVG. */
-export function Logo({ className }: { className?: string }) {
+/** Horizontal lockup for the 44px nav: gradient mark + white wordmark. */
+export function Logo({ className, priority }: { className?: string; priority?: boolean }) {
   return (
     <span className={className} style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
-        <rect x="1" y="1" width="16" height="16" rx="3" fill="none" stroke="currentColor" strokeWidth="1.6" />
-        <path d="M9 1.8v14.4M1.8 9h14.4" stroke="currentColor" strokeWidth="1.6" />
-      </svg>
-      <span style={{ fontWeight: 600, fontSize: 15, letterSpacing: "-0.2px" }}>{site.shortName}</span>
+      <Image src={mark} alt="" height={26} priority={priority} style={{ width: "auto", height: 26 }} />
+      <Image
+        src={wordmarkWhite}
+        alt={site.name}
+        height={22}
+        priority={priority}
+        style={{ width: "auto", height: 22 }}
+      />
     </span>
+  );
+}
+
+/** Stacked lockup (mark over wordmark) for the footer and large placements. */
+export function LogoStacked({ width = 120, className }: { width?: number; className?: string }) {
+  return (
+    <Image
+      src={stackedWhite}
+      alt={site.name}
+      width={width}
+      className={className}
+      style={{ width, height: "auto" }}
+    />
   );
 }

@@ -10,6 +10,7 @@ import {
   ProcessSteps,
   Section,
   SectionHeader,
+  TrustBar,
 } from "@/components/sections/Sections";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/about">): Promise<Metadata> {
@@ -36,17 +37,22 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
         </div>
       </Section>
 
-      <Section surface="obsidian" labelledBy="values-title">
+      <Section surface="obsidian" labelledBy="credentials-title">
+        <SectionHeader id="credentials-title" title={t.credentials.title} body={t.credentials.body} />
+        <TrustBar items={home.trust} />
+      </Section>
+
+      <Section surface="carbon" labelledBy="values-title">
         <SectionHeader id="values-title" title={t.values.title} />
         <OptionGrid items={t.values.items} />
       </Section>
 
-      <Section surface="carbon" labelledBy="process-title">
+      <Section surface="obsidian" labelledBy="process-title">
         <SectionHeader id="process-title" title={home.process.title} />
         <ProcessSteps steps={home.process.steps} />
       </Section>
 
-      <Section surface="obsidian">
+      <Section surface="carbon">
         <CtaBand
           title={home.cta.title}
           body={home.cta.body}

@@ -103,6 +103,20 @@ export function PageHero({
   );
 }
 
+/** Row of credentials (experience, insurance, approvals). */
+export function TrustBar({ items }: { items: { stat: string; label: string }[] }) {
+  return (
+    <ul className={s.trust}>
+      {items.map((item) => (
+        <li key={item.stat} className={s.trustItem}>
+          <span className={`t-feature-stat ${s.trustStat}`}>{item.stat}</span>
+          <span className={`t-small ${s.trustLabel}`}>{item.label}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /** Highlights Media Frame — contained cinematic visual with copy overlaid. */
 export function MediaFrame({
   eyebrow,

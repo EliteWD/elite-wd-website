@@ -14,6 +14,23 @@ Bilingual (EN/ES) Next.js 16 site built on the "Midnight gallery" style referenc
 
 Every placeholder is marked `TODO` — search for it before launch.
 
+## Brand assets
+
+Original logo files live in `brand-source/`. Regenerate every web size
+(nav mark + wordmark, stacked lockups, favicon, apple icon, Open Graph image) with:
+
+```bash
+node scripts/brand-assets.mjs
+```
+
+## Visual QA
+
+Headless screenshots with the local Chrome (dev server must be running):
+
+```bash
+node scripts/shoot.mjs http://localhost:3000/en qa 1280 800 0 footer
+```
+
 ## Structure
 
 - `src/proxy.ts` — redirects `/` to `/en` or `/es` from the browser language.

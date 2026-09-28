@@ -56,8 +56,8 @@ export function GlobalNav({ lang, common }: Props) {
     <>
       <nav className={`${styles.nav} ${open ? styles.open : ""}`} aria-label="Main">
         <div className={`container ${styles.inner}`}>
-          <Link href={href(lang, "home")} className={styles.logo} aria-label={site.name}>
-            <Logo />
+          <Link href={href(lang, "home")} className={styles.logo}>
+            <Logo priority />
           </Link>
 
           <ul className={styles.links}>
