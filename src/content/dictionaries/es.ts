@@ -238,7 +238,6 @@ export const es: Dictionary = {
         { name: "Single-hung", body: "Hoja superior fija y hoja inferior que abre. Clásica, limpia y económica." },
         { name: "Corredera horizontal", body: "Hojas que se deslizan de lado a lado, ideales para aberturas anchas." },
         { name: "Ventana fija", body: "Un vidrio fijo y sin interrupciones que enmarca la vista." },
-        { name: "Awning", body: "Con bisagra superior, puede quedar abierta durante una lluvia ligera." },
         { name: "Formas a medida", body: "Arcos, inclinadas y formas geométricas para aberturas arquitectónicas." },
       ],
     },

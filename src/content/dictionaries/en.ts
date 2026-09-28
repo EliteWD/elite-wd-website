@@ -236,7 +236,6 @@ export const en = {
         { name: "Single-hung", body: "A fixed top sash and an operable bottom sash. Classic, clean and economical." },
         { name: "Horizontal roller", body: "Sashes that glide side to side — ideal for wide openings." },
         { name: "Picture window", body: "A fixed, uninterrupted pane that frames the view." },
-        { name: "Awning", body: "Hinged at the top, so it can stay open during a light rain." },
         { name: "Custom shapes", body: "Arches, rakes and geometric shapes for architectural openings." },
       ],
     },
