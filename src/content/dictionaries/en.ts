@@ -408,7 +408,7 @@ export const en = {
     doorOpen: "Black aluminum impact sliding glass door with one panel partially open onto a travertine pool deck",
     glassMacro: "Cutaway of an impact window frame showing laminated glass and the aluminum extrusion",
     lockDetail: "Close-up of the pull handles and locks on an impact sliding glass door",
-    installHands: "Installer sealing the perimeter of a newly installed impact window",
+    installHands: "Installer sealing the joint between a newly installed impact window frame and the wall",
     aerial: "Aerial view of canal-front homes in Cape Coral, Florida at golden hour",
     frontElevation: "Front of a modern home with an impact glass entry door, sidelights and single-hung impact windows",
   },

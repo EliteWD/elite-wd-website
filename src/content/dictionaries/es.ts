@@ -410,7 +410,7 @@ export const es: Dictionary = {
     doorOpen: "Puerta corrediza de impacto de aluminio negro con un panel entreabierto hacia la terraza de travertino",
     glassMacro: "Corte de un marco de ventana de impacto que muestra el vidrio laminado y el perfil de aluminio",
     lockDetail: "Primer plano de las manijas y cerraduras de una puerta corrediza de impacto",
-    installHands: "Instalador sellando el perímetro de una ventana de impacto recién instalada",
+    installHands: "Instalador sellando la junta entre el marco de una ventana de impacto recién instalada y la pared",
     aerial: "Vista aérea de casas frente a canales en Cape Coral, Florida, al atardecer",
     frontElevation: "Fachada de una casa moderna con puerta de entrada de vidrio de impacto, laterales y ventanas single-hung",
   },

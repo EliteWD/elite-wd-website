@@ -13,14 +13,15 @@ const images = [
   "door-open",
   "glass-macro",
   "lock-detail",
-  "install-hands",
+  "install-hands-v2a", // v2: sealant at the frame-to-opening joint (v1 wrongly sealed the glass)
   "aerial-cape-coral",
   "front-elevation",
 ];
 
 await mkdir("public/images", { recursive: true });
 for (const name of images) {
-  const out = name === "master-d" ? "home-exterior" : name;
+  const renamed = { "master-d": "home-exterior", "install-hands-v2a": "install-hands" };
+  const out = renamed[name] ?? name;
   const info = await sharp(`creative-source/${name}.png`)
     .resize({ width: 2400, withoutEnlargement: true })
     .jpeg({ quality: 84, mozjpeg: true, progressive: true })
