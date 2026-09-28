@@ -87,9 +87,10 @@ export const en = {
       { stat: "Leading", label: "manufacturers" },
     ],
     highlight: {
-      eyebrow: "Protection that never needs deploying",
-      title: "When the wind rises, nothing changes inside.",
-      body: "Laminated impact glass stays bonded even when struck, keeping wind and water outside while the light still comes in. No shutters to store, no panels to hang.",
+      eyebrow: "Protection ready before the storm arrives",
+      title: "When the wind picks up, your home is already prepared.",
+      body: "No need to take out panels, install them, or wait until the last minute. Your impact windows and doors are designed to help protect your home every day while keeping natural light and comfort inside.",
+      tagline: "More protection. Less stress. More peace of mind.",
     },
     features: {
       title: "Every opening, engineered.",

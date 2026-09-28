@@ -184,11 +184,14 @@ export function MediaFrame({
   eyebrow,
   title,
   body,
+  tagline,
   visual,
 }: {
   eyebrow: string;
   title: string;
   body: string;
+  /** Optional emphasized closing line, kept inside the body paragraph so the frame's layout is unchanged. */
+  tagline?: string;
   visual: ReactNode;
 }) {
   return (
@@ -198,7 +201,15 @@ export function MediaFrame({
       <figcaption className={s.mediaCopy}>
         <p className="t-product-label">{eyebrow}</p>
         <p className="t-headline">{title}</p>
-        <p className="t-body">{body}</p>
+        <p className="t-body">
+          {body}
+          {tagline && (
+            <>
+              <br />
+              <strong>{tagline}</strong>
+            </>
+          )}
+        </p>
       </figcaption>
     </figure>
   );

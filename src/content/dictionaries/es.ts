@@ -89,9 +89,10 @@ export const es: Dictionary = {
       { stat: "Fabricantes", label: "líderes del mercado" },
     ],
     highlight: {
-      eyebrow: "Protección que nunca hay que instalar",
-      title: "Cuando sube el viento, adentro nada cambia.",
-      body: "El vidrio laminado de impacto se mantiene unido incluso al recibir un golpe, dejando el viento y el agua afuera mientras la luz sigue entrando. Sin paneles que guardar ni que colgar.",
+      eyebrow: "Protección lista antes de que llegue la tormenta",
+      title: "Cuando el viento sube, tu casa ya está preparada.",
+      body: "No tienes que sacar paneles, instalarlos ni esperar al último momento. Tus puertas y ventanas de impacto están diseñadas para ayudarte a proteger tu hogar todos los días, manteniendo la luz y la comodidad dentro.",
+      tagline: "Más protección. Menos estrés. Más tranquilidad.",
     },
     features: {
       title: "Cada abertura, diseñada con ingeniería.",

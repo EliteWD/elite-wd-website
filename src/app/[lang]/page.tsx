@@ -62,6 +62,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           eyebrow={home.highlight.eyebrow}
           title={home.highlight.title}
           body={home.highlight.body}
+          tagline={home.highlight.tagline}
           visual={<Image src={images.stormInterior} alt={alt.stormInterior} fill sizes="(max-width: 733px) 240vw, 100vw" placeholder="blur" />}
         />
       </Section>
