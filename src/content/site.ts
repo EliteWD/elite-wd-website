@@ -19,7 +19,7 @@ export const site = {
   contact: {
     phone: "(305) 963-8935",
     phoneHref: "+13059638935",
-    email: "carlosquinonesalfonso@gmail.com",
+    email: "carlosq@elitewdi.com",
     // WhatsApp number in E.164 without "+" (empty = hidden)
     whatsapp: "",
   },
@@ -34,6 +34,7 @@ export const site = {
   registered: true,
   insured: true,
   // Florida contractor license number — shown in the footer when set.
+  // Intentionally empty: the owner will provide it when ready.
   license: "",
 
   // Social profile URLs (empty string = hidden). None yet.
