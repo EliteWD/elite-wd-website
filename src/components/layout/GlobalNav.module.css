@@ -188,3 +188,12 @@
     display: none;
   }
 }
+
+/* Narrow phones: tighter gaps so logo + estimate CTA + menu fit on one row
+   without shrinking any type. */
+@media (max-width: 399px) {
+  .inner,
+  .actions {
+    gap: 12px;
+  }
+}

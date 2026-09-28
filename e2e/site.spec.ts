@@ -138,7 +138,7 @@ test.describe("interactive elements", () => {
     await planner.getByRole("button", { name: "Naples" }).click();
 
     await expect(page.getByTestId("planner-summary")).toContainText("Naples");
-    await planner.getByRole("link", { name: "Continue to my free estimate" }).click();
+    await planner.getByRole("link", { name: "Get a Free Estimate" }).click();
 
     await expect(page).toHaveURL(/\/en\/contact\?.*project=windows/);
     await expect(page.getByRole("radio", { name: "Impact windows" })).toBeChecked();
@@ -163,7 +163,7 @@ test.describe("interactive elements", () => {
     await input.fill("naples");
     await checker.getByRole("button", { name: "Check" }).click();
     await expect(page.getByTestId("area-result")).toContainText("Yes — we serve Naples.");
-    await expect(checker.getByRole("link", { name: "Book your free estimate" })).toHaveAttribute("href", /city=Naples/);
+    await expect(checker.getByRole("link", { name: "Get a Free Estimate" })).toHaveAttribute("href", /city=Naples/);
 
     await input.fill("Orlando");
     await checker.getByRole("button", { name: "Check" }).click();

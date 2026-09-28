@@ -7,7 +7,7 @@ import { ProjectPlanner } from "@/components/interactive/ProjectPlanner";
 import { href, type Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { AnnouncementStrip } from "@/components/layout/AnnouncementStrip";
-import { ButtonLink, Capsule } from "@/components/ui/Button";
+import { ButtonLink } from "@/components/ui/Button";
 import {
   ComparisonPanel,
   CtaBand,
@@ -46,7 +46,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         media={<HeroVideo src={heroVideo} poster={images.heroPoster} mobilePoster={images.homeExterior} alt={alt.homeExterior} />}
         actions={
           <>
-            <Capsule>{home.hero.capsule}</Capsule>
             <ButtonLink href={href(lang, "contact")}>{common.cta.estimate}</ButtonLink>
             <ButtonLink href={`tel:${site.contact.phoneHref}`} variant="outline">
               {common.cta.call} {site.contact.phone}

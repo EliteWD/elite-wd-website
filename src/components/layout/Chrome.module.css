@@ -83,6 +83,12 @@
   .localLinks {
     display: none;
   }
+
+  /* Let a long product title wrap instead of pushing the CTA off-screen. */
+  .localTitle {
+    white-space: normal;
+    min-width: 0;
+  }
 }
 
 /* Mobile action bar — phones only */

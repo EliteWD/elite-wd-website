@@ -1,3 +1,6 @@
+/** Single source for every primary estimate CTA (nav, hero, cards, bars, planner, checker). */
+const estimateCta = "Get a Free Estimate";
+
 export const en = {
   common: {
     skipToContent: "Skip to content",
@@ -16,8 +19,8 @@ export const en = {
       switchTo: "Español",
     },
     cta: {
-      estimate: "Get a free estimate",
-      estimateShort: "Free estimate",
+      estimate: estimateCta,
+      estimateShort: estimateCta,
       call: "Call",
       learnMore: "Learn more",
       explore: "Explore",
@@ -25,7 +28,7 @@ export const en = {
     },
     announcement: {
       text: "Hurricane season runs June 1 – November 30.",
-      link: "Book your free in-home estimate",
+      link: estimateCta,
     },
     footer: {
       tagline: "Impact windows and doors, installed across Southwest Florida.",
@@ -78,7 +81,6 @@ export const en = {
       title: "Built for the storm.\nDesigned for the view.",
       subtitle:
         "Hurricane-rated glass, precisely installed across Southwest Florida.",
-      capsule: "Free in-home estimate",
     },
     trust: [
       { stat: "15+ years", label: "of combined experience across our team" },
@@ -213,7 +215,7 @@ export const en = {
       restart: "Start over",
       summary: "Your project",
       openingsLabel: "openings",
-      cta: "Continue to my free estimate",
+      cta: estimateCta,
     },
   },
 
@@ -308,7 +310,7 @@ export const en = {
       yes: "Yes — we serve {city}.",
       no: "{city} isn't on our list yet, but call us — we likely serve your area.",
       empty: "Please type a city.",
-      cta: "Book your free estimate",
+      cta: estimateCta,
     },
   },
 

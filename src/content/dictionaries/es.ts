@@ -1,5 +1,8 @@
 import type { Dictionary } from "./en";
 
+/** Única fuente para todos los CTA principales de estimado (nav, hero, tarjetas, barras, planificador, comprobador). */
+const estimateCta = "Solicitar estimado gratis";
+
 export const es: Dictionary = {
   common: {
     skipToContent: "Saltar al contenido",
@@ -18,8 +21,8 @@ export const es: Dictionary = {
       switchTo: "English",
     },
     cta: {
-      estimate: "Estimado gratis",
-      estimateShort: "Estimado gratis",
+      estimate: estimateCta,
+      estimateShort: estimateCta,
       call: "Llamar",
       learnMore: "Más información",
       explore: "Explorar",
@@ -27,7 +30,7 @@ export const es: Dictionary = {
     },
     announcement: {
       text: "La temporada de huracanes va del 1 de junio al 30 de noviembre.",
-      link: "Agenda tu estimado gratis en casa",
+      link: estimateCta,
     },
     footer: {
       tagline: "Ventanas y puertas de impacto, instaladas en todo el suroeste de Florida.",
@@ -80,7 +83,6 @@ export const es: Dictionary = {
       title: "Hechas para la tormenta.\nDiseñadas para la vista.",
       subtitle:
         "Vidrio certificado contra huracanes, instalado con precisión en todo el suroeste de Florida.",
-      capsule: "Estimado gratis en casa",
     },
     trust: [
       { stat: "+15 años", label: "de experiencia acumulada por nuestro equipo" },
@@ -215,7 +217,7 @@ export const es: Dictionary = {
       restart: "Empezar de nuevo",
       summary: "Tu proyecto",
       openingsLabel: "aberturas",
-      cta: "Continuar a mi estimado gratis",
+      cta: estimateCta,
     },
   },
 
@@ -310,7 +312,7 @@ export const es: Dictionary = {
       yes: "Sí, damos servicio en {city}.",
       no: "{city} aún no está en nuestra lista, pero llámanos: es muy probable que lleguemos a tu zona.",
       empty: "Escribe una ciudad.",
-      cta: "Agenda tu estimado gratis",
+      cta: estimateCta,
     },
   },
 
