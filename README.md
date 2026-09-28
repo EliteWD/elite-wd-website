@@ -34,6 +34,38 @@ node scripts/optimize-creatives.mjs   # originals -> public/images/*.jpg
 node scripts/check-hero-video.mjs     # verifies the hero loop plays and hands off
 ```
 
+## Interactive elements
+
+| Element | Where | Component |
+|---|---|---|
+| Scroll reveal | All pages (`data-reveal`) | `src/components/interactive/RevealObserver.tsx` |
+| Glass simulator | Impact Windows → Glass | `src/components/interactive/GlassSimulator.tsx` |
+| Project planner → pre-filled estimate form | Home | `src/components/interactive/ProjectPlanner.tsx` |
+| "Do we serve your area?" checker | Service Areas | `src/components/interactive/AreaChecker.tsx` |
+| Sticky Call / Estimate bar | Phones, all pages | `src/components/layout/MobileActionBar.tsx` |
+
+All motion is disabled for `prefers-reduced-motion`.
+
+## End-to-end tests (Playwright)
+
+Uses the locally installed Chrome — no browser download.
+
+```bash
+npm run build
+npm run test:e2e
+```
+
+50 checks across desktop and phone: routing and language, every page in both
+languages (status, console errors, broken images, horizontal scroll), mobile
+menu, action bar, reveal, hero video/still, glass simulator, planner → form
+pre-fill, area checker, and form validation.
+
+Review snapshots of the interactive states (server on :3000):
+
+```bash
+$env:VISUAL=1; npx playwright test --project=desktop   # -> test-results/screens/
+```
+
 ## Visual QA
 
 Headless screenshots with the local Chrome (dev server must be running):

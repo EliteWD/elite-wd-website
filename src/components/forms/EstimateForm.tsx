@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { Dictionary } from "@/content/dictionaries/en";
 import type { Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/Button";
@@ -34,6 +34,29 @@ function validate(data: FormData): Partial<Record<Field, true>> {
 export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Props) {
   const [errors, setErrors] = useState<Partial<Record<Field, true>>>({});
   const [status, setStatus] = useState<Status>("idle");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Pre-fill from the project planner / area checker (?project=&openings=&city=).
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+    const params = new URLSearchParams(window.location.search);
+    const project = params.get("project");
+    const city = params.get("city");
+    const openings = params.get("openings");
+
+    if (project && project in t.projectOptions) {
+      form.querySelector<HTMLInputElement>(`input[name="project"][value="${project}"]`)?.click();
+    }
+    if (city) {
+      const select = form.elements.namedItem("city") as HTMLSelectElement | null;
+      if (select) select.value = cities.includes(city) ? city : "Other";
+    }
+    if (openings) {
+      const message = form.elements.namedItem("message") as HTMLTextAreaElement | null;
+      if (message && !message.value) message.value = `${t.openings}: ${openings}`;
+    }
+  }, [cities, t]);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -87,7 +110,7 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
   }
 
   return (
-    <form className={styles.form} onSubmit={onSubmit} noValidate>
+    <form ref={formRef} className={styles.form} onSubmit={onSubmit} noValidate>
       <input type="hidden" name="language" value={lang} />
       <div className={styles.honeypot} aria-hidden="true">
         <label>

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "@/content/dictionaries";
-import { site } from "@/content/site";
+import { site, allCities } from "@/content/site";
+import { ProjectPlanner } from "@/components/interactive/ProjectPlanner";
 import { href, type Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { AnnouncementStrip } from "@/components/layout/AnnouncementStrip";
@@ -32,7 +33,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]">): Promis
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const lang = (await params).lang as Locale;
-  const { home, common, alt } = getDictionary(lang);
+  const { home, common, alt, contact } = getDictionary(lang);
 
   return (
     <>
@@ -122,7 +123,17 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <ProcessSteps steps={home.process.steps} />
       </Section>
 
-      <Section surface="obsidian" labelledBy="areas-title">
+      <Section surface="obsidian" id="planner" labelledBy="planner-title">
+        <SectionHeader id="planner-title" title={home.planner.title} body={home.planner.body} center />
+        <ProjectPlanner
+          t={home.planner}
+          projectOptions={contact.form.projectOptions}
+          cities={allCities}
+          contactHref={href(lang, "contact")}
+        />
+      </Section>
+
+      <Section surface="carbon" labelledBy="areas-title">
         <SectionHeader id="areas-title" title={home.areas.title} body={home.areas.body} center />
         <ServiceAreas
           areas={site.serviceAreas}
@@ -134,12 +145,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         />
       </Section>
 
-      <Section surface="carbon" labelledBy="faq-title">
+      <Section surface="obsidian" labelledBy="faq-title">
         <SectionHeader id="faq-title" title={home.faq.title} center />
         <Faq items={home.faq.items} />
       </Section>
 
-      <Section surface="obsidian">
+      <Section surface="carbon">
         <CtaBand
           title={home.cta.title}
           body={home.cta.body}

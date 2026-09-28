@@ -202,6 +202,23 @@ export const en = {
       title: "See what your home could look like.",
       body: "Book a free, no-obligation in-home estimate.",
     },
+    planner: {
+      title: "Plan your project in 30 seconds.",
+      body: "Three quick questions and your estimate request is ready to send.",
+      step: "Step {n} of 3",
+      questions: {
+        project: "What do you need?",
+        openings: "About how many openings?",
+        city: "Where is the home?",
+      },
+      openings: ["1–5", "6–10", "11–20", "20+"],
+      cityOther: "Other city",
+      back: "Back",
+      restart: "Start over",
+      summary: "Your project",
+      openingsLabel: "openings",
+      cta: "Continue to my free estimate",
+    },
   },
 
   windows: {
@@ -229,6 +246,10 @@ export const en = {
     glass: {
       title: "Glass, tuned to your light.",
       body: "Choose the balance of clarity, privacy and heat control for each room.",
+      simulator: {
+        label: "Preview a glass option",
+        note: "Visual simulation. Actual tint and appearance vary by manufacturer — we bring real samples to your consultation.",
+      },
       items: [
         { name: "Clear Low-E", body: "Maximum clarity with a coating that reflects heat." },
         { name: "Gray tint", body: "Reduces glare and heat with a cool, neutral tone." },
@@ -284,6 +305,16 @@ export const en = {
       subtitle: "Local crews serving Lee, Collier and Charlotte counties.",
     },
     note: "Don't see your city? Call us — we likely serve your area.",
+    checker: {
+      title: "Do we serve your area?",
+      label: "Your city",
+      placeholder: "e.g. Naples",
+      button: "Check",
+      yes: "Yes — we serve {city}.",
+      no: "{city} isn't on our list yet, but call us — we likely serve your area.",
+      empty: "Please type a city.",
+      cta: "Book your free estimate",
+    },
   },
 
   about: {

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getDictionary } from "@/content/dictionaries";
 import { images } from "@/content/images";
-import { site } from "@/content/site";
+import { site, allCities } from "@/content/site";
+import { AreaChecker } from "@/components/interactive/AreaChecker";
 import { href, type Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { ButtonLink } from "@/components/ui/Button";
@@ -28,6 +29,14 @@ export default async function AreasPage({ params }: PageProps<"/[lang]/service-a
       />
 
       <Section surface="obsidian" tight>
+        <AreaChecker
+          t={t.checker}
+          cities={allCities}
+          contactHref={href(lang, "contact")}
+          phone={site.contact.phone}
+          phoneHref={site.contact.phoneHref}
+        />
+        <div style={{ height: "clamp(48px, 6vw, 72px)" }} aria-hidden="true" />
         <ServiceAreas
           areas={site.serviceAreas}
           footer={

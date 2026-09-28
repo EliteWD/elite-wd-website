@@ -1,0 +1,246 @@
+/* ---------- Shared segmented control (pills) ---------- */
+.segments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.segment {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: var(--radius-pills);
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-slate);
+  color: var(--color-porcelain);
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.224px;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.segment:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.segment[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 2px var(--color-apple-blue);
+  background: rgba(0, 113, 227, 0.14);
+}
+
+/* ---------- Glass simulator ---------- */
+.simulator {
+  display: grid;
+  grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 90px);
+  align-items: center;
+  margin-bottom: clamp(48px, 7vw, 90px);
+}
+
+.simPhoto {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-images);
+  overflow: hidden;
+  background: var(--color-carbon);
+}
+
+.simPhoto img {
+  object-fit: cover;
+}
+
+.pane {
+  position: absolute;
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+  mix-blend-mode: multiply;
+}
+
+.clear {
+  background: rgba(150, 190, 205, 0.08);
+}
+
+.gray {
+  background: rgba(40, 44, 50, 0.5);
+}
+
+.bronze {
+  background: rgba(128, 84, 42, 0.5);
+}
+
+/* Frosted: blurred photo copy (see <Frost>) under a milky layer. */
+.privacy {
+  mix-blend-mode: normal;
+  overflow: hidden;
+}
+
+.privacy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(238, 240, 242, 0.45);
+}
+
+.frost {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  filter: blur(14px) saturate(0.65) brightness(1.08);
+}
+
+.insulated {
+  background: rgba(120, 165, 180, 0.16);
+}
+
+.simControls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.simLabel {
+  color: var(--color-porcelain);
+}
+
+.simBody {
+  color: var(--color-porcelain);
+  min-height: 3em;
+}
+
+.simNote {
+  color: var(--color-ash);
+  max-width: 460px;
+}
+
+@media (max-width: 833px) {
+  .simulator {
+    grid-template-columns: 1fr;
+  }
+
+  .simPhoto {
+    max-width: 460px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+
+/* ---------- Project planner ---------- */
+.planner {
+  max-width: 880px;
+  margin-inline: auto;
+  background: var(--color-carbon);
+  border-radius: var(--radius-cards);
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.plannerStep {
+  color: var(--color-ash);
+  margin-bottom: 12px;
+}
+
+.plannerQuestion {
+  color: var(--color-porcelain);
+  margin-bottom: 24px;
+}
+
+.progress {
+  height: 3px;
+  border-radius: 3px;
+  background: var(--color-steel);
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: var(--color-apple-blue);
+  transition: width 0.4s ease;
+}
+
+.plannerFooter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.textButton {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-electric-link);
+  font-size: 14px;
+}
+
+.textButton:hover {
+  text-decoration: underline;
+}
+
+.summary {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.summary li {
+  color: var(--color-porcelain);
+}
+
+.summary li::before {
+  content: "✓";
+  color: var(--color-electric-link);
+  margin-right: 10px;
+}
+
+/* ---------- Area checker ---------- */
+.checker {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.checkerForm {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.checkerInput {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-slate);
+  border-radius: var(--radius-inputs);
+  color: var(--color-porcelain);
+  font-size: 17px;
+  padding: 13px 24px;
+}
+
+.checkerInput:focus {
+  outline: 1px solid var(--color-apple-blue);
+  outline-offset: 1px;
+  border-color: var(--color-apple-blue);
+}
+
+.checkerInput::placeholder {
+  color: var(--color-slate);
+}
+
+.checkerResult {
+  margin-top: 20px;
+  min-height: 1.5em;
+  color: var(--color-porcelain);
+}
+
+.checkerYes::before {
+  content: "✓ ";
+  color: #30d158;
+}
+
+.checkerCta {
+  margin-top: 16px;
+}

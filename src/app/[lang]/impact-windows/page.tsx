@@ -16,6 +16,7 @@ import {
   StageHero,
 } from "@/components/sections/Sections";
 import { images } from "@/content/images";
+import { GlassSimulator } from "@/components/interactive/GlassSimulator";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/impact-windows">): Promise<Metadata> {
   const lang = (await params).lang as Locale;
@@ -70,7 +71,13 @@ export default async function WindowsPage({ params }: PageProps<"/[lang]/impact-
 
       <Section surface="carbon" id="glass" labelledBy="glass-title">
         <SectionHeader id="glass-title" title={t.glass.title} body={t.glass.body} />
-        <OptionGrid items={t.glass.items} />
+        <GlassSimulator
+          photo={images.windowProduct}
+          alt={alt.windowProduct}
+          options={t.glass.items}
+          label={t.glass.simulator.label}
+          note={t.glass.simulator.note}
+        />
       </Section>
 
       <Section surface="obsidian" id="frames" labelledBy="frames-title">

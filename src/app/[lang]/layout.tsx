@@ -7,6 +7,8 @@ import { hasLocale, htmlLang, locales } from "@/lib/i18n";
 import { localBusinessJsonLd } from "@/lib/seo";
 import { GlobalNav } from "@/components/layout/GlobalNav";
 import { Footer } from "@/components/layout/Footer";
+import { MobileActionBar } from "@/components/layout/MobileActionBar";
+import { RevealObserver } from "@/components/interactive/RevealObserver";
 import "../globals.css";
 
 const inter = Inter({
@@ -41,14 +43,18 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const jsonLd = localBusinessJsonLd(lang, dict.meta.home.description);
 
   return (
-    <html lang={htmlLang[lang]} className={inter.variable}>
+    // suppressHydrationWarning: the inline script below adds the `js` class before hydration.
+    <html lang={htmlLang[lang]} className={inter.variable} suppressHydrationWarning>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <a href="#main" className="skip-link">
           {dict.common.skipToContent}
         </a>
         <GlobalNav lang={lang} common={dict.common} />
         <main id="main">{children}</main>
         <Footer lang={lang} common={dict.common} />
+        <MobileActionBar lang={lang} common={dict.common} />
+        <RevealObserver />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}

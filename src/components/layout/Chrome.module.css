@@ -85,6 +85,29 @@
   }
 }
 
+/* Mobile action bar — phones only */
+.actionBar {
+  display: none;
+}
+
+@media (max-width: 733px) {
+  .actionBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 95;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(14, 14, 14, 0.86);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0 -1px 0 var(--color-keyline);
+  }
+}
+
 /* Footer */
 .footer {
   background: var(--color-carbon);
@@ -175,5 +198,12 @@
 
   .footerBrand {
     grid-column: 1 / -1;
+  }
+}
+
+/* Keep the footer's last line reachable above the mobile action bar. */
+@media (max-width: 733px) {
+  .footer {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
   }
 }

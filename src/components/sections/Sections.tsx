@@ -1,6 +1,9 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+
+/** Per-item delay for the scroll reveal (see globals.css). */
+const stagger = (i: number) => ({ "--i": i % 6 }) as CSSProperties;
 import s from "./sections.module.css";
 
 type Surface = "obsidian" | "carbon" | "carbonFlat" | "porcelain";
@@ -38,7 +41,7 @@ export function SectionHeader({
   center?: boolean;
 }) {
   return (
-    <header className={`${s.header} ${center ? s.headerCenter : ""}`}>
+    <header className={`${s.header} ${center ? s.headerCenter : ""}`} data-reveal>
       <h2 id={id} className="t-headline">
         {title}
       </h2>
@@ -165,7 +168,7 @@ export function Photo({
 /** Row of credentials (experience, insurance, approvals). */
 export function TrustBar({ items }: { items: { stat: string; label: string }[] }) {
   return (
-    <ul className={s.trust}>
+    <ul className={s.trust} data-reveal>
       {items.map((item) => (
         <li key={item.stat} className={s.trustItem}>
           <span className={`t-feature-stat ${s.trustStat}`}>{item.stat}</span>
@@ -189,7 +192,7 @@ export function MediaFrame({
   visual: ReactNode;
 }) {
   return (
-    <figure className={s.media}>
+    <figure className={s.media} data-reveal>
       <div className={s.mediaVisual}>{visual}</div>
       <div className={s.mediaShade} aria-hidden="true" />
       <figcaption className={s.mediaCopy}>
@@ -207,8 +210,8 @@ export type Tile = { stat: string; label: string; body: string; visual?: ReactNo
 export function FeatureTiles({ items }: { items: Tile[] }) {
   return (
     <ul className={s.tiles}>
-      {items.map((item) => (
-        <li key={item.stat} className={`${s.tile} ${item.wide ? s.tileWide : ""}`}>
+      {items.map((item, i) => (
+        <li key={item.stat} className={`${s.tile} ${item.wide ? s.tileWide : ""}`} data-reveal style={stagger(i)}>
           {item.visual && <div className={s.tileVisual}>{item.visual}</div>}
           <p className={`t-feature-stat ${s.tileStat}`}>{item.stat}</p>
           <p className={`t-body ${s.tileLabel}`}>{item.label}</p>
@@ -226,8 +229,8 @@ export function ProductCards({
 }) {
   return (
     <div className={s.products}>
-      {items.map((item) => (
-        <article key={item.name} className={s.product}>
+      {items.map((item, i) => (
+        <article key={item.name} className={s.product} data-reveal style={stagger(i)}>
           <h3 className="t-product-name">
             <Link href={item.href}>{item.name}</Link>
           </h3>
@@ -254,7 +257,7 @@ export function ComparisonPanel({
   rows: { label: string; impact: string; shutters: string }[];
 }) {
   return (
-    <div className={s.panel}>
+    <div className={s.panel} data-reveal>
       <SectionHeader title={title} body={subtitle} />
       <div className={s.paleCard}>
         <table className={s.table}>
@@ -288,8 +291,8 @@ export function ComparisonPanel({
 export function ProcessSteps({ steps }: { steps: { title: string; body: string }[] }) {
   return (
     <ol className={s.steps}>
-      {steps.map((step) => (
-        <li key={step.title} className={s.step}>
+      {steps.map((step, i) => (
+        <li key={step.title} className={s.step} data-reveal style={stagger(i)}>
           <h3 className="t-product-label">{step.title}</h3>
           <p className="t-small">{step.body}</p>
         </li>
@@ -308,8 +311,8 @@ export function ServiceAreas({
   return (
     <>
       <div className={s.counties}>
-        {areas.map((area) => (
-          <div key={area.county} className={s.county}>
+        {areas.map((area, i) => (
+          <div key={area.county} className={s.county} data-reveal style={stagger(i)}>
             <h3 className="t-product-label">{area.county}</h3>
             <ul className={s.chips}>
               {area.cities.map((city) => (
@@ -328,7 +331,7 @@ export function ServiceAreas({
 
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
   return (
-    <div className={s.faq}>
+    <div className={s.faq} data-reveal>
       {items.map((item) => (
         <details key={item.q} className={s.faqItem}>
           <summary className="t-product-label">
@@ -348,7 +351,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
 
 export function CtaBand({ title, body, actions }: { title: string; body: string; actions: ReactNode }) {
   return (
-    <div className={s.cta}>
+    <div className={s.cta} data-reveal>
       <h2 className="t-headline">{title}</h2>
       <p className="t-lead">{body}</p>
       <div className={s.actions}>{actions}</div>
@@ -369,7 +372,7 @@ export function OptionGrid({
   return (
     <ul className={`${s.options} ${colClass}`}>
       {items.map((item, i) => (
-        <li key={item.name} className={s.option}>
+        <li key={item.name} className={s.option} data-reveal style={stagger(i)}>
           {numbered && <span className={`t-caption ${s.optionIndex}`}>{String(i + 1).padStart(2, "0")}</span>}
           <h3 className="t-product-label">{item.name}</h3>
           <p className="t-small">{item.body}</p>
@@ -385,7 +388,7 @@ export function Note({ children }: { children: ReactNode }) {
 
 export function Split({ title, body, visual, id }: { title: string; body: string | string[]; visual: ReactNode; id?: string }) {
   return (
-    <div className={s.split}>
+    <div className={s.split} data-reveal>
       <div>
         <h2 id={id} className="t-headline">
           {title}

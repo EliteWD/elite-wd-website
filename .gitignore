@@ -43,3 +43,7 @@ next-env.d.ts
 # Higgsfield originals (~70 MB). Kept locally and in the Higgsfield project;
 # web-ready copies live in public/images and public/video.
 /creative-source/
+
+# Playwright
+/test-results/
+/playwright-report/

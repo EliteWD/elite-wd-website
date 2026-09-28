@@ -204,6 +204,23 @@ export const es: Dictionary = {
       title: "Imagina cómo podría verse tu casa.",
       body: "Agenda un estimado gratis y sin compromiso en tu hogar.",
     },
+    planner: {
+      title: "Planifica tu proyecto en 30 segundos.",
+      body: "Tres preguntas rápidas y tu solicitud de estimado queda lista para enviar.",
+      step: "Paso {n} de 3",
+      questions: {
+        project: "¿Qué necesitas?",
+        openings: "¿Cuántas aberturas aproximadamente?",
+        city: "¿Dónde está la casa?",
+      },
+      openings: ["1–5", "6–10", "11–20", "20+"],
+      cityOther: "Otra ciudad",
+      back: "Atrás",
+      restart: "Empezar de nuevo",
+      summary: "Tu proyecto",
+      openingsLabel: "aberturas",
+      cta: "Continuar a mi estimado gratis",
+    },
   },
 
   windows: {
@@ -231,6 +248,10 @@ export const es: Dictionary = {
     glass: {
       title: "Vidrio a la medida de tu luz.",
       body: "Elige el equilibrio entre claridad, privacidad y control de calor para cada espacio.",
+      simulator: {
+        label: "Previsualiza una opción de vidrio",
+        note: "Simulación visual. El tono y la apariencia reales varían según el fabricante: te llevamos muestras reales a la consulta.",
+      },
       items: [
         { name: "Transparente Low-E", body: "Máxima claridad con un recubrimiento que refleja el calor." },
         { name: "Tinte gris", body: "Reduce el reflejo y el calor con un tono frío y neutro." },
@@ -286,6 +307,16 @@ export const es: Dictionary = {
       subtitle: "Equipos locales en los condados de Lee, Collier y Charlotte.",
     },
     note: "¿No ves tu ciudad? Llámanos, es muy probable que lleguemos a tu zona.",
+    checker: {
+      title: "¿Llegamos a tu zona?",
+      label: "Tu ciudad",
+      placeholder: "ej. Naples",
+      button: "Comprobar",
+      yes: "Sí, damos servicio en {city}.",
+      no: "{city} aún no está en nuestra lista, pero llámanos: es muy probable que lleguemos a tu zona.",
+      empty: "Escribe una ciudad.",
+      cta: "Agenda tu estimado gratis",
+    },
   },
 
   about: {
