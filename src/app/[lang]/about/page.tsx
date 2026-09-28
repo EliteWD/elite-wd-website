@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getDictionary } from "@/content/dictionaries";
+import { images } from "@/content/images";
 import { href, type Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { ButtonLink } from "@/components/ui/Button";
 import {
   CtaBand,
+  MediaHero,
   OptionGrid,
-  PageHero,
+  Photo,
   ProcessSteps,
   Section,
   SectionHeader,
+  Split,
   TrustBar,
 } from "@/components/sections/Sections";
 
@@ -20,21 +24,25 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/about">): 
 
 export default async function AboutPage({ params }: PageProps<"/[lang]/about">) {
   const lang = (await params).lang as Locale;
-  const { about: t, home, common } = getDictionary(lang);
+  const { about: t, home, common, alt } = getDictionary(lang);
 
   return (
     <>
-      <PageHero label={t.hero.label} title={t.hero.title} subtitle={t.hero.subtitle} />
+      <MediaHero
+        compact
+        label={t.hero.label}
+        title={t.hero.title}
+        subtitle={t.hero.subtitle}
+        media={<Image src={images.frontElevation} alt={alt.frontElevation} fill priority sizes="(max-width: 733px) 180vw, 100vw" placeholder="blur" />}
+      />
 
       <Section surface="carbon" labelledBy="story-title">
-        <SectionHeader id="story-title" title={t.story.title} />
-        <div style={{ maxWidth: 760, display: "grid", gap: 24 }}>
-          {t.story.paragraphs.map((paragraph) => (
-            <p key={paragraph} className="t-lead muted">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <Split
+          id="story-title"
+          title={t.story.title}
+          body={t.story.paragraphs}
+          visual={<Photo src={images.installHands} alt={alt.installHands} />}
+        />
       </Section>
 
       <Section surface="obsidian" labelledBy="credentials-title">

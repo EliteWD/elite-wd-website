@@ -1,3 +1,4 @@
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import s from "./sections.module.css";
@@ -65,7 +66,7 @@ export function StageHero({
   return (
     <section className={s.stage} aria-labelledby="hero-title">
       <div className={`${s.stageVisual} ${wide ? s.stageVisualWide : ""}`}>{visual}</div>
-      <div className={s.stageCopy}>
+      <div className={`${s.stageCopy} ${s.stageCopyFramed}`}>
         <p className={`t-product-name ${s.stageLabel}`}>{label}</p>
         <h1 id="hero-title" className={`t-display ${s.stageTitle}`}>
           {title}
@@ -103,6 +104,64 @@ export function PageHero({
   );
 }
 
+/**
+ * Full-bleed media hero: video or photograph fills the stage, copy sits on
+ * the lower edge over a gradient into Obsidian.
+ */
+export function MediaHero({
+  label,
+  title,
+  subtitle,
+  media,
+  actions,
+  compact,
+}: {
+  label: string;
+  title: string;
+  subtitle?: string;
+  media: ReactNode;
+  actions?: ReactNode;
+  compact?: boolean;
+}) {
+  return (
+    <section className={`${s.mediaHero} ${compact ? s.mediaHeroCompact : ""}`} aria-labelledby="hero-title">
+      <div className={s.mediaHeroMedia}>{media}</div>
+      <div className={s.mediaHeroShade} aria-hidden="true" />
+      <div className={`container ${s.mediaHeroCopy}`}>
+        <p className={`t-product-name ${s.stageLabel}`}>{label}</p>
+        <h1 id="hero-title" className={`t-display ${s.stageTitle}`}>
+          {title}
+        </h1>
+        {subtitle && <p className={`t-lead ${s.mediaHeroSubtitle}`}>{subtitle}</p>}
+        {actions && <div className={s.actions}>{actions}</div>}
+      </div>
+    </section>
+  );
+}
+
+/** Photograph in a 28px media frame (no shadow, per the reference). */
+export function Photo({
+  src,
+  alt,
+  ratio = "4 / 3",
+  sizes = "(max-width: 833px) 100vw, 50vw",
+  priority,
+  className,
+}: {
+  src: StaticImageData;
+  alt: string;
+  ratio?: string;
+  sizes?: string;
+  priority?: boolean;
+  className?: string;
+}) {
+  return (
+    <div className={`${s.photo} ${className ?? ""}`} style={{ aspectRatio: ratio }}>
+      <Image src={src} alt={alt} fill sizes={sizes} placeholder="blur" priority={priority} />
+    </div>
+  );
+}
+
 /** Row of credentials (experience, insurance, approvals). */
 export function TrustBar({ items }: { items: { stat: string; label: string }[] }) {
   return (
@@ -131,7 +190,8 @@ export function MediaFrame({
 }) {
   return (
     <figure className={s.media}>
-      {visual}
+      <div className={s.mediaVisual}>{visual}</div>
+      <div className={s.mediaShade} aria-hidden="true" />
       <figcaption className={s.mediaCopy}>
         <p className="t-product-label">{eyebrow}</p>
         <p className="t-headline">{title}</p>
@@ -323,14 +383,18 @@ export function Note({ children }: { children: ReactNode }) {
   return <p className={`t-small ${s.note}`}>{children}</p>;
 }
 
-export function Split({ title, body, visual, id }: { title: string; body: string; visual: ReactNode; id?: string }) {
+export function Split({ title, body, visual, id }: { title: string; body: string | string[]; visual: ReactNode; id?: string }) {
   return (
     <div className={s.split}>
       <div>
         <h2 id={id} className="t-headline">
           {title}
         </h2>
-        <p className="t-lead">{body}</p>
+        {(Array.isArray(body) ? body : [body]).map((paragraph) => (
+          <p key={paragraph} className="t-lead">
+            {paragraph}
+          </p>
+        ))}
       </div>
       <div className={s.splitVisual}>{visual}</div>
     </div>

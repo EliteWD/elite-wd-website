@@ -14,7 +14,10 @@ await mkdir(outDir, { recursive: true });
 const browser = await puppeteer.launch({ executablePath, headless: true });
 const page = await browser.newPage();
 await page.setViewport({ width: Number(w), height: Number(h), deviceScaleFactor: 1 });
-await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
+// MOTION=1 keeps animations/video on; default is reduced motion for stable stills.
+if (!process.env.MOTION) {
+  await page.emulateMediaFeatures([{ name: "prefers-reduced-motion", value: "reduce" }]);
+}
 const errors = [];
 page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
 page.on("pageerror", (e) => errors.push(e.message));

@@ -91,7 +91,6 @@ export const en = {
       title: "When the wind rises, nothing changes inside.",
       body: "Laminated impact glass stays bonded even when struck, keeping wind and water outside while the light still comes in. No shutters to store, no panels to hang.",
     },
-    glassLabels: ["Glass", "Interlayer", "Glass"] as [string, string, string],
     features: {
       title: "Every opening, engineered.",
       items: [
@@ -357,6 +356,18 @@ export const en = {
       },
       privacy: "We'll only use your information to respond to your request.",
     },
+  },
+
+  alt: {
+    homeExterior: "Modern Southwest Florida home with a four-panel black impact sliding glass door and matching single-hung impact windows beside the pool",
+    stormInterior: "Calm living room seen from inside while hurricane rain streaks the impact sliding glass door",
+    windowProduct: "Single-hung impact window with a black aluminum frame installed in white stucco",
+    doorOpen: "Black aluminum impact sliding glass door with one panel partially open onto a travertine pool deck",
+    glassMacro: "Cutaway of an impact window frame showing laminated glass and the aluminum extrusion",
+    lockDetail: "Close-up of the pull handles and locks on an impact sliding glass door",
+    installHands: "Installer sealing the perimeter of a newly installed impact window",
+    aerial: "Aerial view of canal-front homes in Cape Coral, Florida at golden hour",
+    frontElevation: "Front of a modern home with an impact glass entry door, sidelights and single-hung impact windows",
   },
 
   notFound: {

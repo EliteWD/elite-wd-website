@@ -1,0 +1,30 @@
+/**
+ * Generated photography (Higgsfield, from /creative-source via
+ * scripts/optimize-creatives.mjs). Static imports give next/image the
+ * dimensions and a blur placeholder.
+ */
+import homeExterior from "../../public/images/home-exterior.jpg";
+import stormInterior from "../../public/images/storm-interior.jpg";
+import windowProduct from "../../public/images/window-product.jpg";
+import doorOpen from "../../public/images/door-open.jpg";
+import glassMacro from "../../public/images/glass-macro.jpg";
+import lockDetail from "../../public/images/lock-detail.jpg";
+import installHands from "../../public/images/install-hands.jpg";
+import aerial from "../../public/images/aerial-cape-coral.jpg";
+import frontElevation from "../../public/images/front-elevation.jpg";
+import heroPoster from "../../public/images/hero-poster.jpg";
+
+export const images = {
+  heroPoster,
+  homeExterior,
+  stormInterior,
+  windowProduct,
+  doorOpen,
+  glassMacro,
+  lockDetail,
+  installHands,
+  aerial,
+  frontElevation,
+};
+
+export const heroVideo = "/video/hero.mp4";

@@ -93,7 +93,6 @@ export const es: Dictionary = {
       title: "Cuando sube el viento, adentro nada cambia.",
       body: "El vidrio laminado de impacto se mantiene unido incluso al recibir un golpe, dejando el viento y el agua afuera mientras la luz sigue entrando. Sin paneles que guardar ni que colgar.",
     },
-    glassLabels: ["Vidrio", "Capa intermedia", "Vidrio"],
     features: {
       title: "Cada abertura, diseñada con ingeniería.",
       items: [
@@ -359,6 +358,18 @@ export const es: Dictionary = {
       },
       privacy: "Solo usaremos tu información para responder a tu solicitud.",
     },
+  },
+
+  alt: {
+    homeExterior: "Casa moderna del suroeste de Florida con puerta corrediza de impacto de cuatro paneles negros y ventanas single-hung de impacto junto a la piscina",
+    stormInterior: "Sala tranquila vista desde adentro mientras la lluvia de huracán golpea la puerta corrediza de impacto",
+    windowProduct: "Ventana single-hung de impacto con marco de aluminio negro instalada en estuco blanco",
+    doorOpen: "Puerta corrediza de impacto de aluminio negro con un panel entreabierto hacia la terraza de travertino",
+    glassMacro: "Corte de un marco de ventana de impacto que muestra el vidrio laminado y el perfil de aluminio",
+    lockDetail: "Primer plano de las manijas y cerraduras de una puerta corrediza de impacto",
+    installHands: "Instalador sellando el perímetro de una ventana de impacto recién instalada",
+    aerial: "Vista aérea de casas frente a canales en Cape Coral, Florida, al atardecer",
+    frontElevation: "Fachada de una casa moderna con puerta de entrada de vidrio de impacto, laterales y ventanas single-hung",
   },
 
   notFound: {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getDictionary } from "@/content/dictionaries";
 import { site } from "@/content/site";
@@ -12,17 +13,17 @@ import {
   Faq,
   FeatureTiles,
   MediaFrame,
+  MediaHero,
+  Photo,
   ProcessSteps,
   ProductCards,
   Section,
   SectionHeader,
   ServiceAreas,
-  StageHero,
   TrustBar,
 } from "@/components/sections/Sections";
-import { OpeningRender } from "@/components/visuals/OpeningRender";
-import { GlassSection } from "@/components/visuals/GlassSection";
-import { StormScene } from "@/components/visuals/StormScene";
+import { HeroVideo } from "@/components/visuals/HeroVideo";
+import { heroVideo, images } from "@/content/images";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
   const lang = (await params).lang as Locale;
@@ -31,21 +32,17 @@ export async function generateMetadata({ params }: PageProps<"/[lang]">): Promis
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const lang = (await params).lang as Locale;
-  const { home, common } = getDictionary(lang);
-
-  const tiles = home.features.items.map((item, i) =>
-    i === 0 ? { ...item, visual: <GlassSection labels={home.glassLabels} /> } : item,
-  );
+  const { home, common, alt } = getDictionary(lang);
 
   return (
     <>
       <AnnouncementStrip lang={lang} text={common.announcement} />
 
-      <StageHero
+      <MediaHero
         label={home.hero.label}
         title={home.hero.title}
         subtitle={home.hero.subtitle}
-        visual={<OpeningRender id="hero-window" />}
+        media={<HeroVideo src={heroVideo} poster={images.heroPoster} mobilePoster={images.homeExterior} alt={alt.homeExterior} />}
         actions={
           <>
             <Capsule>{home.hero.capsule}</Capsule>
@@ -64,13 +61,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           eyebrow={home.highlight.eyebrow}
           title={home.highlight.title}
           body={home.highlight.body}
-          visual={<StormScene />}
+          visual={<Image src={images.stormInterior} alt={alt.stormInterior} fill sizes="(max-width: 733px) 240vw, 100vw" placeholder="blur" />}
         />
       </Section>
 
       <Section surface="carbon" labelledBy="features-title">
         <SectionHeader id="features-title" title={home.features.title} />
-        <FeatureTiles items={tiles} />
+        <FeatureTiles items={home.features.items} />
       </Section>
 
       <Section surface="obsidian" labelledBy="products-title">
@@ -80,7 +77,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             {
               ...home.products.windows,
               href: href(lang, "windows"),
-              visual: <OpeningRender id="card-window" />,
+              visual: <Photo src={images.windowProduct} alt={alt.windowProduct} ratio="4 / 5" sizes="(max-width: 833px) 90vw, 40vw" />,
               actions: (
                 <>
                   <ButtonLink href={href(lang, "windows")} size="compact">
@@ -95,7 +92,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             {
               ...home.products.doors,
               href: href(lang, "doors"),
-              visual: <OpeningRender id="card-door" variant="door" />,
+              visual: <Photo src={images.doorOpen} alt={alt.doorOpen} ratio="4 / 5" sizes="(max-width: 833px) 90vw, 40vw" />,
               actions: (
                 <>
                   <ButtonLink href={href(lang, "doors")} size="compact">

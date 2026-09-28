@@ -57,7 +57,7 @@
   height: clamp(280px, 52svh, 600px);
   max-width: 88vw;
   margin: 0 auto;
-  aspect-ratio: 8 / 9;
+  aspect-ratio: 4 / 5;
 }
 
 .stageVisualWide {
@@ -109,6 +109,114 @@
 
 .pageHero .stageSubtitle {
   margin-top: 24px;
+}
+
+/* ---------- Full-bleed media hero ---------- */
+.mediaHero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(calc(100svh - var(--nav-height)), 980px);
+  padding-top: 120px;
+  padding-bottom: clamp(48px, 7vw, 96px);
+  background: var(--color-obsidian);
+  overflow: hidden;
+  text-align: center;
+}
+
+.mediaHeroCompact {
+  min-height: min(72svh, 720px);
+}
+
+.mediaHeroMedia {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.mediaHeroMedia img,
+.mediaHeroMedia video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Top keeps the nav legible; bottom melts into the Obsidian stage below. */
+.mediaHeroShade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 22%),
+    linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.82) 30%, rgba(0, 0, 0, 0.35) 58%, rgba(0, 0, 0, 0) 76%);
+}
+
+/* Photographs sit in a frame, so the copy starts below it instead of overlapping. */
+.stageCopyFramed {
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.mediaHeroCopy {
+  position: relative;
+}
+
+.mediaHeroSubtitle {
+  margin: 20px auto 0;
+  max-width: 620px;
+  color: rgba(245, 245, 247, 0.82);
+}
+
+/* Phones: a 16:9 photograph can't fill a portrait screen without losing the
+   subject, so the media becomes a 4:5 frame on top and the copy follows. */
+@media (max-width: 733px) {
+  .mediaHero,
+  .mediaHeroCompact {
+    display: block;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .mediaHeroMedia {
+    position: relative;
+    z-index: 0;
+    aspect-ratio: 4 / 5;
+  }
+
+  .mediaHeroCompact .mediaHeroMedia {
+    aspect-ratio: 1 / 1;
+  }
+
+  .mediaHeroShade {
+    z-index: 0;
+    bottom: auto;
+    aspect-ratio: 4 / 5;
+    background:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 20%),
+      linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0.6) 22%, rgba(0, 0, 0, 0) 50%);
+  }
+
+  .mediaHeroCompact .mediaHeroShade {
+    aspect-ratio: 1 / 1;
+  }
+
+  .mediaHeroCopy {
+    z-index: 1;
+    margin-top: -96px;
+  }
+}
+
+/* ---------- Photo frame ---------- */
+.photo {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-images);
+  overflow: hidden;
+  background: var(--color-carbon);
+}
+
+.photo img {
+  object-fit: cover;
 }
 
 /* ---------- Trust bar (credentials row) ---------- */
@@ -172,12 +280,25 @@
   isolation: isolate;
 }
 
-.media > svg {
+.mediaVisual {
   position: absolute;
   inset: 0;
+  z-index: -2;
+}
+
+.mediaVisual svg,
+.mediaVisual img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* Legibility for the overlaid copy on photographs. */
+.mediaShade {
+  position: absolute;
+  inset: 0;
   z-index: -1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 35%, rgba(0, 0, 0, 0) 65%);
 }
 
 .mediaCopy {
@@ -188,7 +309,7 @@
 }
 
 .mediaCopy p:first-child {
-  color: var(--color-ash);
+  color: rgba(245, 245, 247, 0.78);
   margin-bottom: 12px;
 }
 
@@ -220,7 +341,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-height: 240px;
+  min-height: 220px;
 }
 
 .tileVisual {
@@ -318,14 +439,7 @@
 
 .productVisual {
   width: 100%;
-  max-width: 420px;
-  margin-top: 16px;
-  aspect-ratio: 8 / 7;
-  overflow: hidden;
-}
-
-.productVisual svg {
-  width: 100%;
+  margin: 32px 0 clamp(20px, 3vw, 40px);
 }
 
 @media (max-width: 833px) {

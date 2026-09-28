@@ -23,6 +23,17 @@ Original logo files live in `brand-source/`. Regenerate every web size
 node scripts/brand-assets.mjs
 ```
 
+## Photography & hero video
+
+Generated with Higgsfield (GPT Image 2.5 stills, Seedance 2.5 video) following
+`docs/creative-brief.md`. Originals live in `creative-source/` (git-ignored, ~70 MB;
+also stored in the Higgsfield project "Elite W&D Installers — Website").
+
+```bash
+node scripts/optimize-creatives.mjs   # originals -> public/images/*.jpg
+node scripts/check-hero-video.mjs     # verifies the hero loop plays and hands off
+```
+
 ## Visual QA
 
 Headless screenshots with the local Chrome (dev server must be running):

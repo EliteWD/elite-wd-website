@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getDictionary } from "@/content/dictionaries";
+import { images } from "@/content/images";
 import { site } from "@/content/site";
 import { href, type Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { ButtonLink } from "@/components/ui/Button";
-import { CtaBand, PageHero, Section, ServiceAreas } from "@/components/sections/Sections";
+import { CtaBand, MediaHero, Section, ServiceAreas } from "@/components/sections/Sections";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/service-areas">): Promise<Metadata> {
   const lang = (await params).lang as Locale;
@@ -13,13 +15,19 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/service-ar
 
 export default async function AreasPage({ params }: PageProps<"/[lang]/service-areas">) {
   const lang = (await params).lang as Locale;
-  const { areas: t, home, common } = getDictionary(lang);
+  const { areas: t, home, common, alt } = getDictionary(lang);
 
   return (
     <>
-      <PageHero label={t.hero.label} title={t.hero.title} subtitle={t.hero.subtitle} />
+      <MediaHero
+        compact
+        label={t.hero.label}
+        title={t.hero.title}
+        subtitle={t.hero.subtitle}
+        media={<Image src={images.aerial} alt={alt.aerial} fill priority sizes="(max-width: 733px) 180vw, 100vw" placeholder="blur" />}
+      />
 
-      <Section surface="carbon" tight>
+      <Section surface="obsidian" tight>
         <ServiceAreas
           areas={site.serviceAreas}
           footer={
@@ -33,7 +41,7 @@ export default async function AreasPage({ params }: PageProps<"/[lang]/service-a
         />
       </Section>
 
-      <Section surface="obsidian">
+      <Section surface="carbon">
         <CtaBand
           title={home.cta.title}
           body={home.cta.body}

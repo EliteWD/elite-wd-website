@@ -11,11 +11,11 @@ import {
   OptionGrid,
   Section,
   SectionHeader,
+  Photo,
   Split,
   StageHero,
 } from "@/components/sections/Sections";
-import { OpeningRender } from "@/components/visuals/OpeningRender";
-import { GlassSection } from "@/components/visuals/GlassSection";
+import { images } from "@/content/images";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/impact-windows">): Promise<Metadata> {
   const lang = (await params).lang as Locale;
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/impact-win
 
 export default async function WindowsPage({ params }: PageProps<"/[lang]/impact-windows">) {
   const lang = (await params).lang as Locale;
-  const { windows: t, home, common } = getDictionary(lang);
+  const { windows: t, home, common, alt } = getDictionary(lang);
 
   return (
     <>
@@ -43,7 +43,7 @@ export default async function WindowsPage({ params }: PageProps<"/[lang]/impact-
         label={t.hero.label}
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        visual={<OpeningRender id="windows-hero" />}
+        visual={<Photo src={images.windowProduct} alt={alt.windowProduct} ratio="4 / 5" sizes="(max-width: 833px) 88vw, 480px" priority />}
         actions={
           <>
             <ButtonLink href={href(lang, "contact")}>{common.cta.estimate}</ButtonLink>
@@ -59,7 +59,7 @@ export default async function WindowsPage({ params }: PageProps<"/[lang]/impact-
           id="overview-title"
           title={t.overview.title}
           body={t.overview.body}
-          visual={<GlassSection labels={home.glassLabels} />}
+          visual={<Photo src={images.glassMacro} alt={alt.glassMacro} />}
         />
       </Section>
 

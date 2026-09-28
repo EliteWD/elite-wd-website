@@ -9,12 +9,13 @@ import {
   CtaBand,
   FeatureTiles,
   OptionGrid,
+  Photo,
   Section,
   SectionHeader,
   Split,
   StageHero,
 } from "@/components/sections/Sections";
-import { OpeningRender } from "@/components/visuals/OpeningRender";
+import { images } from "@/content/images";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/impact-doors">): Promise<Metadata> {
   const lang = (await params).lang as Locale;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/impact-doo
 
 export default async function DoorsPage({ params }: PageProps<"/[lang]/impact-doors">) {
   const lang = (await params).lang as Locale;
-  const { doors: t, home, common } = getDictionary(lang);
+  const { doors: t, home, common, alt } = getDictionary(lang);
 
   return (
     <>
@@ -41,8 +42,7 @@ export default async function DoorsPage({ params }: PageProps<"/[lang]/impact-do
         label={t.hero.label}
         title={t.hero.title}
         subtitle={t.hero.subtitle}
-        wide
-        visual={<OpeningRender id="doors-hero" variant="door" />}
+        visual={<Photo src={images.doorOpen} alt={alt.doorOpen} ratio="4 / 5" sizes="(max-width: 833px) 88vw, 480px" priority />}
         actions={
           <>
             <ButtonLink href={href(lang, "contact")}>{common.cta.estimate}</ButtonLink>
@@ -58,7 +58,7 @@ export default async function DoorsPage({ params }: PageProps<"/[lang]/impact-do
           id="overview-title"
           title={t.overview.title}
           body={t.overview.body}
-          visual={<OpeningRender id="doors-split" variant="door" />}
+          visual={<Photo src={images.lockDetail} alt={alt.lockDetail} />}
         />
       </Section>
 

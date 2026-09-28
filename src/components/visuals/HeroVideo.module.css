@@ -1,0 +1,34 @@
+.root {
+  position: absolute;
+  inset: 0;
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* On phones keep the door and both windows in frame. */
+@media (max-width: 733px) {
+  .poster {
+    object-position: 50% 50%;
+  }
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
