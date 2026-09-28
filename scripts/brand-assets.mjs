@@ -73,6 +73,7 @@ const og = await sharp(src("logo-stacked-white-text.webp")).trim().resize({ heig
 await sharp({ create: { width: 1200, height: 630, channels: 4, background: BLACK } })
   .composite([{ input: og, gravity: "center" }])
   .png()
-  .toFile("src/app/opengraph-image.png");
+  // Under [lang] so it resolves against the layout's metadataBase.
+  .toFile("src/app/[lang]/opengraph-image.png");
 
 console.log("Brand assets generated.");

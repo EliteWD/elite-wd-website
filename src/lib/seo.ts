@@ -52,7 +52,7 @@ export function localBusinessJsonLd(lang: Locale, description: string) {
     description,
     url: `${site.url}${href(lang, "home")}`,
     logo: `${site.url}/brand/logo-stacked-black.png`,
-    image: `${site.url}/opengraph-image.png`,
+    image: `${site.url}/${lang}/opengraph-image.png`,
     telephone: contact.phoneHref,
     email: contact.email,
     inLanguage: lang === "en" ? "en-US" : "es-US",
