@@ -181,10 +181,20 @@ test.describe("estimate form", () => {
       "Please enter a valid email address.",
       "Please select your city.",
       "Please choose a project type.",
+      "Please choose the property type.",
+      "Please choose when you'd like to do it.",
     ]) {
       await expect(page.getByText(message)).toBeVisible();
     }
     await expect(page.getByLabel("Full name")).toBeFocused();
+  });
+
+  test("property type and timeline questions appear in Spanish too", async ({ page }) => {
+    await page.goto("/es/contact");
+    await expect(page.getByRole("group", { name: "¿Qué tipo de propiedad es?" }).getByRole("radio")).toHaveCount(4);
+    await expect(page.getByRole("group", { name: "¿Cuándo te gustaría realizar el proyecto?" }).getByRole("radio")).toHaveCount(4);
+    await page.getByRole("radio", { name: "Condominio" }).check();
+    await expect(page.getByRole("radio", { name: "Condominio" })).toBeChecked();
   });
 
   test("a valid request asks to call while no endpoint is connected", async ({ page }) => {
@@ -194,6 +204,8 @@ test.describe("estimate form", () => {
     await page.getByLabel("Email").fill("test@example.com");
     await page.getByLabel("City").selectOption("Cape Coral");
     await page.getByRole("radio", { name: "Impact doors" }).check();
+    await page.getByRole("radio", { name: "Single-family home in an HOA community" }).check();
+    await page.getByRole("radio", { name: "In 1–3 months" }).check();
     await page.getByRole("button", { name: "Request my estimate" }).click();
     // Scope to the form: Next.js also renders a (hidden) route-announcer alert.
     await expect(page.locator("form").getByRole("alert")).toContainText("please call us");

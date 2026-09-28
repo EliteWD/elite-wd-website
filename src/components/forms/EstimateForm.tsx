@@ -15,7 +15,8 @@ type Props = {
   phoneHref: string;
 };
 
-type Field = "name" | "phone" | "email" | "city" | "project";
+type Field = "name" | "phone" | "email" | "city" | "project" | "propertyType" | "timeline";
+type ChoiceField = "project" | "propertyType" | "timeline";
 type Status = "idle" | "sending" | "success" | "notConnected" | "error";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -28,6 +29,8 @@ function validate(data: FormData): Partial<Record<Field, true>> {
   if (!emailPattern.test(get("email"))) errors.email = true;
   if (!get("city")) errors.city = true;
   if (!get("project")) errors.project = true;
+  if (!get("propertyType")) errors.propertyType = true;
+  if (!get("timeline")) errors.timeline = true;
   return errors;
 }
 
@@ -100,6 +103,28 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
 
   const fieldClass = (field: Field, base: string) => `${base} ${errors[field] ? styles.invalid : ""}`;
   const describedBy = (field: Field) => (errors[field] ? `${field}-error` : undefined);
+
+  /** Single-answer question rendered as pill buttons (radio group). */
+  const choice = (name: ChoiceField, legend: string, options: Record<string, string>) => (
+    <fieldset
+      className={`${styles.segmented} ${styles.full}`}
+      aria-invalid={errors[name]}
+      aria-describedby={describedBy(name)}
+    >
+      <legend className={styles.label}>{legend}</legend>
+      {Object.entries(options).map(([value, text]) => (
+        <label key={value} className={styles.segment}>
+          <input type="radio" name={name} value={value} />
+          <span>{text}</span>
+        </label>
+      ))}
+      {errors[name] && (
+        <span id={`${name}-error`} className={`${styles.error} ${styles.full}`} style={{ width: "100%" }}>
+          {t.errors[name]}
+        </span>
+      )}
+    </fieldset>
+  );
 
   if (status === "success") {
     return (
@@ -199,24 +224,9 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
         />
       </div>
 
-      <fieldset
-        className={`${styles.segmented} ${styles.full}`}
-        aria-invalid={errors.project}
-        aria-describedby={describedBy("project")}
-      >
-        <legend className={styles.label}>{t.project}</legend>
-        {(Object.keys(t.projectOptions) as (keyof typeof t.projectOptions)[]).map((key) => (
-          <label key={key} className={styles.segment}>
-            <input type="radio" name="project" value={key} />
-            <span>{t.projectOptions[key]}</span>
-          </label>
-        ))}
-        {errors.project && (
-          <span id="project-error" className={`${styles.error} ${styles.full}`} style={{ width: "100%" }}>
-            {t.errors.project}
-          </span>
-        )}
-      </fieldset>
+      {choice("project", t.project, t.projectOptions)}
+      {choice("propertyType", t.propertyType, t.propertyTypeOptions)}
+      {choice("timeline", t.timeline, t.timelineOptions)}
 
       <div className={`${styles.field} ${styles.full}`}>
         <label htmlFor="message" className={styles.label}>{t.message}</label>
