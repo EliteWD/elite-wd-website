@@ -14,7 +14,7 @@ export const site = {
   name: "Elite W&D Installers LLC",
   shortName: "Elite W&D Installers",
   // Production URL (canonical URLs, sitemap, hreflang, Open Graph)
-  url: "https://www.elitewdi.com",
+  url: "https://elitewdi.com",
 
   contact: {
     phone: "(305) 963-8935",
