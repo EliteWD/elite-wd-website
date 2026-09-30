@@ -416,6 +416,10 @@ export const en = {
     entryDoor: "Impact glass front entry door with matching fixed sidelights in black aluminum",
     livingRoom: "Calm living room behind impact sliding glass doors and windows at golden hour",
     consultation: "Measuring a window opening during a free in-home consultation",
+    styleSingleHung: "Single-hung impact window with a black aluminum frame in white stucco",
+    styleHorizontalRoller: "Horizontal roller impact window with two equal sliding sashes",
+    stylePicture: "Large fixed picture impact window framing the view",
+    styleCustomShape: "Custom arched impact window with a semicircular transom",
   },
 
   notFound: {

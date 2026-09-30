@@ -418,6 +418,10 @@ export const es: Dictionary = {
     entryDoor: "Puerta de entrada de vidrio de impacto con laterales fijos iguales en aluminio negro",
     livingRoom: "Sala tranquila detrás de puertas corredizas y ventanas de impacto al atardecer",
     consultation: "Medición de una abertura de ventana durante una consulta gratis en casa",
+    styleSingleHung: "Ventana single-hung de impacto con marco de aluminio negro en estuco blanco",
+    styleHorizontalRoller: "Ventana corredera horizontal de impacto con dos hojas iguales",
+    stylePicture: "Gran ventana fija de impacto que enmarca la vista",
+    styleCustomShape: "Ventana de impacto a medida con arco semicircular superior",
   },
 
   notFound: {

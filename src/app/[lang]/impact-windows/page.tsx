@@ -66,7 +66,20 @@ export default async function WindowsPage({ params }: PageProps<"/[lang]/impact-
 
       <Section surface="obsidian" id="styles" labelledBy="styles-title">
         <SectionHeader id="styles-title" title={t.styles.title} />
-        <OptionGrid items={t.styles.items} numbered />
+        {/* Photos follow the dictionary order: single-hung, horizontal roller, picture, custom shapes. */}
+        <OptionGrid
+          items={t.styles.items.map((item, i) => ({
+            ...item,
+            image: [
+              { src: images.styleSingleHung, alt: alt.styleSingleHung },
+              { src: images.styleHorizontalRoller, alt: alt.styleHorizontalRoller },
+              { src: images.stylePicture, alt: alt.stylePicture },
+              { src: images.styleCustomShape, alt: alt.styleCustomShape },
+            ][i],
+          }))}
+          columns={2}
+          numbered
+        />
       </Section>
 
       <Section surface="carbon" id="glass" labelledBy="glass-title">

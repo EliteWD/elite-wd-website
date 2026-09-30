@@ -18,8 +18,16 @@ import multiSlide from "../../public/images/multi-slide.jpg";
 import entryDoor from "../../public/images/entry-door.jpg";
 import livingRoom from "../../public/images/living-room.jpg";
 import consultation from "../../public/images/consultation.jpg";
+import styleSingleHung from "../../public/images/style-single-hung.jpg";
+import styleHorizontalRoller from "../../public/images/style-horizontal-roller.jpg";
+import stylePicture from "../../public/images/style-picture.jpg";
+import styleCustomShape from "../../public/images/style-custom-shape.jpg";
 
 export const images = {
+  styleSingleHung,
+  styleHorizontalRoller,
+  stylePicture,
+  styleCustomShape,
   heroPoster,
   frenchDoors,
   multiSlide,
