@@ -411,6 +411,11 @@ export const en = {
     installHands: "Installer sealing the joint between a newly installed impact window frame and the wall",
     aerial: "Aerial view of canal-front homes in Cape Coral, Florida at golden hour",
     frontElevation: "Front of a modern home with an impact glass entry door, sidelights and single-hung impact windows",
+    frenchDoors: "Pair of black aluminum impact French doors opening onto a travertine lanai",
+    multiSlide: "Impact multi-slide glass door with panels stacked open to the pool and lanai",
+    entryDoor: "Impact glass front entry door with matching fixed sidelights in black aluminum",
+    livingRoom: "Calm living room behind impact sliding glass doors and windows at golden hour",
+    consultation: "Measuring a window opening during a free in-home consultation",
   },
 
   notFound: {

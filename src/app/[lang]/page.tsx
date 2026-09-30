@@ -21,6 +21,7 @@ import {
   Section,
   SectionHeader,
   ServiceAreas,
+  Split,
   TrustBar,
 } from "@/components/sections/Sections";
 import { HeroVideo } from "@/components/visuals/HeroVideo";
@@ -119,7 +120,13 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </Section>
 
       <Section surface="carbon" labelledBy="process-title">
-        <SectionHeader id="process-title" title={home.process.title} />
+        <Split
+          id="process-title"
+          title={home.process.title}
+          body={[]}
+          visual={<Photo src={images.consultation} alt={alt.consultation} />}
+        />
+        <div style={{ height: "clamp(48px, 6vw, 72px)" }} aria-hidden="true" />
         <ProcessSteps steps={home.process.steps} />
       </Section>
 

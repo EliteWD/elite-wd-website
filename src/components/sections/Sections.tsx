@@ -375,7 +375,7 @@ export function OptionGrid({
   columns = 3,
   numbered,
 }: {
-  items: { name: string; body: string }[];
+  items: { name: string; body: string; image?: { src: StaticImageData; alt: string } }[];
   columns?: 2 | 3 | 4;
   numbered?: boolean;
 }) {
@@ -384,6 +384,14 @@ export function OptionGrid({
     <ul className={`${s.options} ${colClass}`}>
       {items.map((item, i) => (
         <li key={item.name} className={s.option} data-reveal style={stagger(i)}>
+          {item.image && (
+            <Photo
+              src={item.image.src}
+              alt={item.image.alt}
+              className={s.optionPhoto}
+              sizes={columns === 2 ? "(max-width: 733px) 90vw, 45vw" : "(max-width: 733px) 90vw, 30vw"}
+            />
+          )}
           {numbered && <span className={`t-caption ${s.optionIndex}`}>{String(i + 1).padStart(2, "0")}</span>}
           <h3 className="t-product-label">{item.name}</h3>
           <p className="t-small">{item.body}</p>

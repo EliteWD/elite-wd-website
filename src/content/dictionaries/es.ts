@@ -413,6 +413,11 @@ export const es: Dictionary = {
     installHands: "Instalador sellando la junta entre el marco de una ventana de impacto recién instalada y la pared",
     aerial: "Vista aérea de casas frente a canales en Cape Coral, Florida, al atardecer",
     frontElevation: "Fachada de una casa moderna con puerta de entrada de vidrio de impacto, laterales y ventanas single-hung",
+    frenchDoors: "Puertas francesas de impacto de aluminio negro que abren hacia una terraza de travertino",
+    multiSlide: "Puerta multi-slide de impacto con los paneles apilados, abierta hacia la piscina y el lanai",
+    entryDoor: "Puerta de entrada de vidrio de impacto con laterales fijos iguales en aluminio negro",
+    livingRoom: "Sala tranquila detrás de puertas corredizas y ventanas de impacto al atardecer",
+    consultation: "Medición de una abertura de ventana durante una consulta gratis en casa",
   },
 
   notFound: {

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getDictionary } from "@/content/dictionaries";
+import { images } from "@/content/images";
 import { site, allCities } from "@/content/site";
 import type { Locale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
-import { PageHero, Section } from "@/components/sections/Sections";
+import { MediaHero, Section } from "@/components/sections/Sections";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 import { ButtonLink } from "@/components/ui/Button";
 import styles from "./contact.module.css";
@@ -15,12 +17,18 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/contact">)
 
 export default async function ContactPage({ params }: PageProps<"/[lang]/contact">) {
   const lang = (await params).lang as Locale;
-  const { contact: t, common } = getDictionary(lang);
+  const { contact: t, common, alt } = getDictionary(lang);
   const counties = site.serviceAreas.map((area) => area.county).join(" · ");
 
   return (
     <>
-      <PageHero label={t.hero.label} title={t.hero.title} subtitle={t.hero.subtitle} />
+      <MediaHero
+        compact
+        label={t.hero.label}
+        title={t.hero.title}
+        subtitle={t.hero.subtitle}
+        media={<Image src={images.livingRoom} alt={alt.livingRoom} fill priority sizes="(max-width: 733px) 180vw, 100vw" placeholder="blur" />}
+      />
 
       <Section surface="obsidian" tight>
         <div className={styles.layout}>

@@ -64,7 +64,20 @@ export default async function DoorsPage({ params }: PageProps<"/[lang]/impact-do
 
       <Section surface="obsidian" id="styles" labelledBy="styles-title">
         <SectionHeader id="styles-title" title={t.styles.title} />
-        <OptionGrid items={t.styles.items} columns={2} numbered />
+        {/* Photos follow the dictionary order: sliding, multi-slide, French, entry. */}
+        <OptionGrid
+          items={t.styles.items.map((item, i) => ({
+            ...item,
+            image: [
+              { src: images.doorOpen, alt: alt.doorOpen },
+              { src: images.multiSlide, alt: alt.multiSlide },
+              { src: images.frenchDoors, alt: alt.frenchDoors },
+              { src: images.entryDoor, alt: alt.entryDoor },
+            ][i],
+          }))}
+          columns={2}
+          numbered
+        />
       </Section>
 
       <Section surface="carbon" id="details" labelledBy="details-title">

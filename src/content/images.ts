@@ -13,9 +13,19 @@ import installHands from "../../public/images/install-hands.jpg";
 import aerial from "../../public/images/aerial-cape-coral.jpg";
 import frontElevation from "../../public/images/front-elevation.jpg";
 import heroPoster from "../../public/images/hero-poster.jpg";
+import frenchDoors from "../../public/images/french-doors.jpg";
+import multiSlide from "../../public/images/multi-slide.jpg";
+import entryDoor from "../../public/images/entry-door.jpg";
+import livingRoom from "../../public/images/living-room.jpg";
+import consultation from "../../public/images/consultation.jpg";
 
 export const images = {
   heroPoster,
+  frenchDoors,
+  multiSlide,
+  entryDoor,
+  livingRoom,
+  consultation,
   homeExterior,
   stormInterior,
   windowProduct,

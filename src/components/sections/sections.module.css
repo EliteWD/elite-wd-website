@@ -701,6 +701,12 @@
   color: var(--color-ash);
 }
 
+/* Photo at the top of an option card: 28px frame inset by the card padding. */
+.optionPhoto {
+  margin-bottom: 14px;
+  border-radius: 18px;
+}
+
 .optionIndex {
   color: var(--color-ash);
 }

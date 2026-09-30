@@ -16,6 +16,11 @@ const images = [
   "install-hands-v2a", // v2: sealant at the frame-to-opening joint (v1 wrongly sealed the glass)
   "aerial-cape-coral",
   "front-elevation",
+  "french-doors",
+  "multi-slide",
+  "entry-door",
+  "living-room",
+  "consultation",
 ];
 
 await mkdir("public/images", { recursive: true });

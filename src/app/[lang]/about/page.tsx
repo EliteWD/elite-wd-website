@@ -56,7 +56,13 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       </Section>
 
       <Section surface="obsidian" labelledBy="process-title">
-        <SectionHeader id="process-title" title={home.process.title} />
+        <Split
+          id="process-title"
+          title={home.process.title}
+          body={[]}
+          visual={<Photo src={images.consultation} alt={alt.consultation} />}
+        />
+        <div style={{ height: "clamp(48px, 6vw, 72px)" }} aria-hidden="true" />
         <ProcessSteps steps={home.process.steps} />
       </Section>
 
