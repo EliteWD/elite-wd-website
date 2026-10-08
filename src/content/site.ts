@@ -61,11 +61,11 @@ export const site = {
   ] as ServiceArea[],
 
   /**
-   * Estimate form delivery. Leave empty until a provider is chosen
-   * (e.g. Formspree: "https://formspree.io/f/xxxxxxx"). While empty the form
-   * validates normally and then asks the visitor to call instead.
+   * Estimate form delivery: our own relay (src/app/api/estimate/route.ts),
+   * which forwards to the GoHighLevel webhook set in GHL_WEBHOOK_URL.
+   * Empty = the form validates and then asks the visitor to call instead.
    */
-  formEndpoint: "",
+  formEndpoint: "/api/estimate",
 };
 
 export const allCities = site.serviceAreas.flatMap((area) => area.cities);
