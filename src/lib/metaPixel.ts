@@ -23,11 +23,15 @@ export function track(event: PixelEvent, params?: Record<string, string | number
   window.fbq("track", event, params);
 }
 
-/** Official base code, minus its PageView — MetaPixelEvents sends that on every route. */
+/**
+ * Official base code, minus its PageView — MetaPixelEvents sends that on every route.
+ * autoConfig off stops Meta's automatic button-click guessing (SubscribedButtonClick),
+ * which duplicated our manual Contact event and logged every menu click.
+ */
 export const pixelBaseCode = (pixelId: string) =>
   `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?` +
   `n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;` +
   `n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;` +
   `t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}` +
   `(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');` +
-  `fbq('init','${pixelId}');`;
+  `fbq('set','autoConfig',false,'${pixelId}');fbq('init','${pixelId}');`;
