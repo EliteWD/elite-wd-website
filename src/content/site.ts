@@ -66,6 +66,9 @@ export const site = {
    * Empty = the form validates and then asks the visitor to call instead.
    */
   formEndpoint: "/api/estimate",
+
+  // Meta Pixel (Events Manager → Data sources). Empty = pixel not loaded.
+  metaPixelId: "1583531303036818",
 };
 
 export const allCities = site.serviceAreas.flatMap((area) => area.cities);

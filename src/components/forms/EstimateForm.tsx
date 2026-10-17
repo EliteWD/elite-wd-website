@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { Dictionary } from "@/content/dictionaries/en";
 import type { Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/Button";
+import { track } from "@/lib/metaPixel";
 import styles from "./EstimateForm.module.css";
 
 type Props = {
@@ -94,6 +95,8 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
         body: data,
       });
       if (!response.ok) throw new Error(String(response.status));
+      // No personal data goes to Meta — only what kind of project it is.
+      track("Lead", { content_name: "Estimate form", content_category: String(data.get("project")) });
       form.reset();
       setStatus("success");
     } catch {
