@@ -69,6 +69,8 @@ export const site = {
 
   // Meta Pixel (Events Manager → Data sources). Empty = pixel not loaded.
   metaPixelId: "1583531303036818",
+  // Meta Business → Brand safety → Domains → Meta-tag method: the `content` value only.
+  metaDomainVerification: "xeqxk0sb39dcuabqfu724uvkr1m0aj",
 };
 
 export const allCities = site.serviceAreas.flatMap((area) => area.cities);

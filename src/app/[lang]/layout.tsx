@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   title: { default: site.name, template: `%s | ${site.name}` },
   applicationName: site.name,
   formatDetection: { telephone: true },
+  ...(site.metaDomainVerification && {
+    other: { "facebook-domain-verification": site.metaDomainVerification },
+  }),
 };
 
 export const viewport: Viewport = {
