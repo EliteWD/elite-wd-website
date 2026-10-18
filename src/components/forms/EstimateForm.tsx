@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import Link from "next/link";
 import type { Dictionary } from "@/content/dictionaries/en";
-import type { Locale } from "@/lib/i18n";
+import { href, type Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/Button";
 import { track } from "@/lib/metaPixel";
 import styles from "./EstimateForm.module.css";
@@ -246,7 +247,9 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
         <Button type="submit" size="large" disabled={status === "sending"}>
           {status === "sending" ? t.sending : t.submit}
         </Button>
-        <p className={styles.privacy}>{t.privacy}</p>
+        <p className={styles.privacy}>
+          {t.privacy} <Link href={href(lang, "privacy")}>{t.privacyLink}</Link>
+        </p>
       </div>
     </form>
   );

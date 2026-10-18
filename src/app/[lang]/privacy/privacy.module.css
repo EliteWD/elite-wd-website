@@ -1,0 +1,33 @@
+/* Long-form legal copy: one readable column on the Carbon surface. */
+.policy {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 48px);
+  color: var(--color-porcelain);
+}
+
+.policy section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.policy section p {
+  color: var(--color-ash);
+}
+
+.links,
+.contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact li {
+  color: var(--color-ash);
+}

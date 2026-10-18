@@ -39,6 +39,7 @@ export const en = {
       license: "FL License",
       registeredInsured: "Registered & insured",
       rights: "All rights reserved.",
+      privacy: "Privacy Policy",
     },
   },
 
@@ -72,6 +73,11 @@ export const en = {
       title: "Free Estimate",
       description:
         "Request a free in-home estimate for impact windows and doors anywhere in Southwest Florida.",
+    },
+    privacy: {
+      title: "Privacy Policy",
+      description:
+        "How Elite W&D Installers LLC collects, uses and protects the information you share through elitewdi.com.",
     },
   },
 
@@ -397,7 +403,102 @@ export const en = {
         propertyType: "Please choose the property type.",
         timeline: "Please choose when you'd like to do it.",
       },
-      privacy: "We'll only use your information to respond to your request.",
+      privacy:
+        "We'll use your information to respond to your request, including by phone, text or email. Message and data rates may apply.",
+      privacyLink: "Privacy Policy",
+    },
+  },
+
+  privacy: {
+    label: "Legal",
+    title: "Privacy Policy",
+    updated: "Last updated: October 17, 2026",
+    intro:
+      "This policy explains what information Elite W&D Installers LLC (\"we\", \"us\") collects when you visit elitewdi.com or contact us, how we use it, and the choices you have.",
+    sections: [
+      {
+        title: "Information we collect",
+        body: [
+          "Information you give us: when you request an estimate or contact us, we collect your name, phone number, email address, city, project details (project type, property type, timeline, approximate number of openings) and any message you include.",
+          "Information collected automatically: when you browse the site, we and our partners collect the pages you visit, the buttons you tap (for example, the call button), your browser and device type, IP address and approximate location, using cookies and similar technologies.",
+        ],
+      },
+      {
+        title: "How we use your information",
+        body: [
+          "To respond to your request, prepare estimates, schedule visits and keep you informed about your project.",
+          "To understand how the site is used and improve it.",
+          "To measure the results of our advertising and show our ads to people who may be interested in our services.",
+          "To keep business records and comply with legal obligations.",
+        ],
+      },
+      {
+        title: "Meta Pixel and advertising",
+        body: [
+          "We use the Meta Pixel, a tool from Meta Platforms (Facebook and Instagram), to measure visits and actions on our site, such as viewing a product page, tapping the call button or submitting the estimate form.",
+          "We use Meta's automatic advanced matching. When you submit the form, your email address and phone number are converted into a scrambled code (hashed) in your browser before being sent to Meta, which uses them to match the visit with a Meta account. This helps us measure our ads and reach people likely to be interested in our services. Meta does not receive your email or phone in readable form from us.",
+          "You can control how Meta uses this information to show you ads in your Meta ad preferences, and you can limit cookies in your browser settings.",
+        ],
+        links: [
+          { label: "Meta ad preferences", href: "https://www.facebook.com/adpreferences" },
+          { label: "Digital Advertising Alliance opt-out", href: "https://optout.aboutads.info" },
+        ],
+      },
+      {
+        title: "Who we share information with",
+        body: [
+          "We do not sell your personal information. We share it only with service providers that help us run our business, and only as needed for them to do so:",
+          "GoHighLevel, our customer management system, which stores estimate requests and notifies our team. Netlify, which hosts this website. Meta, for the advertising measurement described above.",
+          "We may also disclose information if required by law or to protect our rights, our customers or the public.",
+        ],
+      },
+      {
+        title: "Text messages",
+        body: [
+          "If you give us your phone number, we may call or text you about your request and your project. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of text messages at any time, or HELP for help.",
+          "We do not share or sell your mobile phone number or your consent to receive text messages with third parties for their marketing purposes.",
+        ],
+      },
+      {
+        title: "Cookies",
+        body: [
+          "Cookies are small files stored by your browser. We use them, through the Meta Pixel, to measure visits and advertising. You can block or delete cookies in your browser settings; the site will keep working.",
+        ],
+      },
+      {
+        title: "How long we keep information",
+        body: [
+          "We keep your information for as long as needed to respond to you, complete your project, keep warranty and business records, or meet legal requirements. After that, we delete it or keep it in a form that no longer identifies you.",
+        ],
+      },
+      {
+        title: "Security",
+        body: [
+          "We use reasonable safeguards to protect your information, including encrypted connections (HTTPS) and access limited to our team and service providers. No method of transmission or storage is completely secure, so we cannot guarantee absolute security.",
+        ],
+      },
+      {
+        title: "Your choices",
+        body: [
+          "You can ask us to see, correct or delete the personal information we hold about you, or to stop contacting you, by emailing or calling us using the details below. We will respond within a reasonable time.",
+        ],
+      },
+      {
+        title: "Children",
+        body: [
+          "This site is intended for adults. We do not knowingly collect information from children under 13.",
+        ],
+      },
+      {
+        title: "Changes to this policy",
+        body: [
+          "We may update this policy from time to time. The date at the top shows when it was last changed.",
+        ],
+      },
+    ],
+    contact: {
+      title: "Contact us",
+      body: "Questions about this policy or your information? Contact Elite W&D Installers LLC:",
     },
   },
 

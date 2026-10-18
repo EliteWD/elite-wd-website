@@ -149,6 +149,11 @@
   color: var(--color-ash);
 }
 
+.privacy a {
+  color: var(--color-porcelain);
+  text-decoration: underline;
+}
+
 .status {
   padding: 16px 20px;
   border-radius: 20px;

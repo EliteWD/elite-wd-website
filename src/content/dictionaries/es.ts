@@ -41,6 +41,7 @@ export const es: Dictionary = {
       license: "Licencia FL",
       registeredInsured: "Empresa registrada y asegurada",
       rights: "Todos los derechos reservados.",
+      privacy: "Política de privacidad",
     },
   },
 
@@ -74,6 +75,11 @@ export const es: Dictionary = {
       title: "Estimado gratis",
       description:
         "Solicita un estimado gratis en casa para ventanas y puertas de impacto en cualquier parte del suroeste de Florida.",
+    },
+    privacy: {
+      title: "Política de privacidad",
+      description:
+        "Cómo Elite W&D Installers LLC recopila, usa y protege la información que compartes a través de elitewdi.com.",
     },
   },
 
@@ -399,7 +405,102 @@ export const es: Dictionary = {
         propertyType: "Elige el tipo de propiedad.",
         timeline: "Elige cuándo te gustaría realizarlo.",
       },
-      privacy: "Solo usaremos tu información para responder a tu solicitud.",
+      privacy:
+        "Usaremos tu información para responder a tu solicitud, incluso por teléfono, mensaje de texto o correo. Pueden aplicar tarifas de mensajes y datos.",
+      privacyLink: "Política de privacidad",
+    },
+  },
+
+  privacy: {
+    label: "Legal",
+    title: "Política de privacidad",
+    updated: "Última actualización: 17 de octubre de 2026",
+    intro:
+      "Esta política explica qué información recopila Elite W&D Installers LLC (\"nosotros\") cuando visitas elitewdi.com o nos contactas, cómo la usamos y qué opciones tienes.",
+    sections: [
+      {
+        title: "Información que recopilamos",
+        body: [
+          "Información que nos das: cuando solicitas un estimado o nos contactas, recopilamos tu nombre, teléfono, correo electrónico, ciudad, detalles del proyecto (tipo de proyecto, tipo de propiedad, plazo, número aproximado de aberturas) y cualquier mensaje que incluyas.",
+          "Información que se recopila automáticamente: cuando navegas por el sitio, nosotros y nuestros socios recopilamos las páginas que visitas, los botones que tocas (por ejemplo, el botón de llamar), el tipo de navegador y dispositivo, la dirección IP y tu ubicación aproximada, mediante cookies y tecnologías similares.",
+        ],
+      },
+      {
+        title: "Cómo usamos tu información",
+        body: [
+          "Para responder a tu solicitud, preparar estimados, agendar visitas y mantenerte informado sobre tu proyecto.",
+          "Para entender cómo se usa el sitio y mejorarlo.",
+          "Para medir los resultados de nuestra publicidad y mostrar nuestros anuncios a personas que puedan estar interesadas en nuestros servicios.",
+          "Para mantener registros de la empresa y cumplir con obligaciones legales.",
+        ],
+      },
+      {
+        title: "Pixel de Meta y publicidad",
+        body: [
+          "Usamos el Pixel de Meta, una herramienta de Meta Platforms (Facebook e Instagram), para medir visitas y acciones en nuestro sitio, como ver una página de productos, tocar el botón de llamar o enviar el formulario de estimado.",
+          "Usamos las coincidencias avanzadas automáticas de Meta. Cuando envías el formulario, tu correo y tu teléfono se convierten en un código cifrado (hash) en tu navegador antes de enviarse a Meta, que los usa para relacionar la visita con una cuenta de Meta. Esto nos ayuda a medir nuestros anuncios y a llegar a personas que probablemente estén interesadas en nuestros servicios. Meta no recibe de nosotros tu correo ni tu teléfono en forma legible.",
+          "Puedes controlar cómo Meta usa esta información para mostrarte anuncios en tus preferencias de anuncios de Meta, y puedes limitar las cookies en la configuración de tu navegador.",
+        ],
+        links: [
+          { label: "Preferencias de anuncios de Meta", href: "https://www.facebook.com/adpreferences" },
+          { label: "Exclusión de la Digital Advertising Alliance", href: "https://optout.aboutads.info" },
+        ],
+      },
+      {
+        title: "Con quién compartimos la información",
+        body: [
+          "No vendemos tu información personal. Solo la compartimos con proveedores que nos ayudan a operar la empresa, y únicamente en la medida necesaria para que lo hagan:",
+          "GoHighLevel, nuestro sistema de gestión de clientes, que guarda las solicitudes de estimado y avisa a nuestro equipo. Netlify, que aloja este sitio web. Meta, para la medición de publicidad descrita arriba.",
+          "También podemos divulgar información si la ley lo exige o para proteger nuestros derechos, a nuestros clientes o al público.",
+        ],
+      },
+      {
+        title: "Mensajes de texto",
+        body: [
+          "Si nos das tu número de teléfono, podemos llamarte o enviarte mensajes de texto sobre tu solicitud y tu proyecto. La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP en cualquier momento para dejar de recibir mensajes de texto, o HELP para obtener ayuda.",
+          "No compartimos ni vendemos tu número de celular ni tu consentimiento para recibir mensajes de texto a terceros para sus propios fines de marketing.",
+        ],
+      },
+      {
+        title: "Cookies",
+        body: [
+          "Las cookies son pequeños archivos que guarda tu navegador. Las usamos, a través del Pixel de Meta, para medir visitas y publicidad. Puedes bloquearlas o borrarlas en la configuración de tu navegador; el sitio seguirá funcionando.",
+        ],
+      },
+      {
+        title: "Cuánto tiempo guardamos la información",
+        body: [
+          "Guardamos tu información el tiempo necesario para responderte, completar tu proyecto, mantener registros de garantía y de la empresa, o cumplir requisitos legales. Después, la eliminamos o la conservamos de forma que ya no te identifique.",
+        ],
+      },
+      {
+        title: "Seguridad",
+        body: [
+          "Usamos medidas razonables para proteger tu información, como conexiones cifradas (HTTPS) y acceso limitado a nuestro equipo y proveedores. Ningún método de transmisión o almacenamiento es completamente seguro, por lo que no podemos garantizar una seguridad absoluta.",
+        ],
+      },
+      {
+        title: "Tus opciones",
+        body: [
+          "Puedes pedirnos ver, corregir o eliminar la información personal que tenemos sobre ti, o que dejemos de contactarte, escribiéndonos o llamándonos con los datos de abajo. Responderemos en un plazo razonable.",
+        ],
+      },
+      {
+        title: "Menores de edad",
+        body: [
+          "Este sitio está dirigido a adultos. No recopilamos a sabiendas información de menores de 13 años.",
+        ],
+      },
+      {
+        title: "Cambios a esta política",
+        body: [
+          "Podemos actualizar esta política de vez en cuando. La fecha al principio indica cuándo se cambió por última vez.",
+        ],
+      },
+    ],
+    contact: {
+      title: "Contáctanos",
+      body: "¿Preguntas sobre esta política o sobre tu información? Contacta a Elite W&D Installers LLC:",
     },
   },
 

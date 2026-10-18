@@ -15,7 +15,9 @@ type Props = {
   common: Dictionary["common"];
 };
 
-const navRoutes: RouteKey[] = ["windows", "doors", "areas", "about", "contact"];
+const navRoutes = ["windows", "doors", "areas", "about", "contact"] as const satisfies readonly RouteKey[];
+/** Routes shown in the menu (legal pages like Privacy live in the footer only). */
+type NavRoute = (typeof navRoutes)[number] | "home";
 
 export function GlobalNav({ lang, common }: Props) {
   const pathname = usePathname();
@@ -41,7 +43,7 @@ export function GlobalNav({ lang, common }: Props) {
     };
   }, [open]);
 
-  const labels: Record<RouteKey, string> = {
+  const labels: Record<NavRoute, string> = {
     home: site.shortName,
     windows: common.nav.windows,
     doors: common.nav.doors,
@@ -109,7 +111,7 @@ export function GlobalNav({ lang, common }: Props) {
         inert={!open}
       >
         <ul className={styles.panelLinks}>
-          {(["home", ...navRoutes] as RouteKey[]).map((route) => (
+          {(["home", ...navRoutes] as NavRoute[]).map((route) => (
             <li key={route}>
               <Link
                 href={href(lang, route)}
