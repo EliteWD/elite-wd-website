@@ -22,6 +22,11 @@ export const site = {
     email: "carlosq@elitewdi.com",
     // WhatsApp number in E.164 without "+" (empty = hidden)
     whatsapp: "",
+    // Number the /text bridge page opens a text message to (the welcome
+    // email's "Text me" button). Owner's cell for now; switch to the
+    // GoHighLevel number (239) 360-5958 once its A2P registration is approved.
+    sms: "(305) 963-8935",
+    smsHref: "+13059638935",
   },
 
   /**

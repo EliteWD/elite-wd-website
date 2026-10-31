@@ -19,7 +19,7 @@ function classes({ variant = "primary", size = "regular", block, className }: Om
     .join(" ");
 }
 
-/** Pill link. External (tel:, mailto:, https:) hrefs render a plain anchor. */
+/** Pill link. External (tel:, sms:, mailto:, https:) hrefs render a plain anchor. */
 export function ButtonLink({
   href,
   variant,
@@ -30,7 +30,7 @@ export function ButtonLink({
   ...rest
 }: Common & Omit<ComponentProps<"a">, "className" | "children"> & { href: string }) {
   const cls = classes({ variant, size, block, className });
-  if (/^(tel:|mailto:|https?:)/.test(href)) {
+  if (/^(tel:|sms:|mailto:|https?:)/.test(href)) {
     return (
       <a href={href} className={cls} {...rest}>
         {children}

@@ -579,6 +579,19 @@ export const es: Dictionary = {
     styleCustomShape: "Ventana de impacto a medida con arco semicircular superior",
   },
 
+  // Formal (usted) like the welcome email this page is opened from.
+  textUs: {
+    metaTitle: "Escríbale a Carlos",
+    label: "Elite W&D Installers",
+    title: "Escríbame para coordinar su visita",
+    subtitle: "Abriendo su app de mensajes…",
+    body: "Si no se abrió, toque el botón de abajo. Inclúyame la dirección de la casa y el día y la hora que le quedan mejor.",
+    message: "Hola Carlos, quiero coordinar mi estimado gratis. Mi dirección es: ",
+    send: "Enviar mensaje",
+    call: "Llamar",
+    desktop: "¿Está en una computadora? Escriba a este número desde su celular:",
+  },
+
   notFound: {
     title: "Esta página no está aquí.",
     body: "Es posible que la página que buscas se haya movido.",

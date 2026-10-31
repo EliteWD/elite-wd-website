@@ -577,6 +577,20 @@ export const en = {
     styleCustomShape: "Custom arched impact window with a semicircular transom",
   },
 
+  // Bridge page behind the welcome email's "Text me" button: email clients and
+  // link tracking break sms: links, so the email links here instead.
+  textUs: {
+    metaTitle: "Text Carlos",
+    label: "Elite W&D Installers",
+    title: "Text me to set up your visit",
+    subtitle: "Opening your messages app…",
+    body: "If it didn't open, tap the button below. Include your home address and the day and time that work best for you.",
+    message: "Hi Carlos, I'd like to set up my free estimate. My address is: ",
+    send: "Send a text",
+    call: "Call",
+    desktop: "On a computer? Text this number from your phone:",
+  },
+
   notFound: {
     title: "This page isn't here.",
     body: "The page you're looking for may have moved.",
