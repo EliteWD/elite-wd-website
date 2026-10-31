@@ -464,6 +464,8 @@ export const en = {
       {
         title: "Text messages",
         body: [
+          "How you opt in: on our estimate form, you can check the optional box under the phone field (\"Yes, text me at this number to schedule faster\"). Only people who check that box receive text messages from Elite W&D Installers LLC. Checking it is not required to request an estimate.",
+          "What we text: messages about your estimate request, such as scheduling, appointment reminders and project updates. We collect your phone number and your consent choice, and keep a record of when you opted in.",
           "If you give us your phone number, we may call or text you about your request and your project. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of text messages at any time, or HELP for help.",
           "We do not share or sell your mobile phone number or your consent to receive text messages with third parties for their marketing purposes. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.",
         ],

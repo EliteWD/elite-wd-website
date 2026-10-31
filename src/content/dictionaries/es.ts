@@ -466,6 +466,8 @@ export const es: Dictionary = {
       {
         title: "Mensajes de texto",
         body: [
+          "Cómo te suscribes: en nuestro formulario de estimado puedes marcar la casilla opcional debajo del teléfono (\"Sí, escríbanme a este número para agendar más rápido\"). Solo quienes marcan esa casilla reciben mensajes de texto de Elite W&D Installers LLC. Marcarla no es necesario para pedir un estimado.",
+          "Qué te escribimos: mensajes sobre tu solicitud de estimado, como coordinación de la visita, recordatorios de cita y novedades del proyecto. Guardamos tu número, tu elección de consentimiento y la fecha en que te suscribiste.",
           "Si nos das tu número de teléfono, podemos llamarte o enviarte mensajes de texto sobre tu solicitud y tu proyecto. La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP en cualquier momento para dejar de recibir mensajes de texto, o HELP para obtener ayuda.",
           "No compartimos ni vendemos tu número de celular ni tu consentimiento para recibir mensajes de texto a terceros para sus propios fines de marketing. No compartiremos información móvil con terceros ni afiliados con fines de marketing o promoción. Los datos de suscripción y el consentimiento para mensajes de texto no se compartirán con ningún tercero.",
         ],
