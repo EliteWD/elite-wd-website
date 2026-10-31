@@ -413,7 +413,7 @@ export const es: Dictionary = {
       },
       smsConsent: "Sí, escríbanme a este número para agendar más rápido",
       smsDisclosure:
-        "Opcional. Al marcar esta casilla, aceptas recibir mensajes de texto de Elite W&D Installers LLC sobre tu solicitud de estimado. La frecuencia varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar o HELP para ayuda.",
+        "Opcional. Al marcar esta casilla, aceptas recibir mensajes de texto de Elite W&D Installers LLC sobre tu solicitud de estimado, como coordinación de la visita, recordatorios de cita y novedades del proyecto. La frecuencia varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar o HELP para ayuda.",
       privacy: "Usaremos tu información para responder a tu solicitud.",
       privacyLink: "Política de privacidad",
       termsLink: "Términos",
@@ -527,6 +527,7 @@ export const es: Dictionary = {
           "La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. No es necesario aceptar los mensajes de texto para solicitar un estimado ni para contratar nuestros servicios.",
           "Responde STOP en cualquier momento para dejar de recibir mensajes; te lo confirmaremos y no te escribiremos más, salvo que vuelvas a suscribirte. Responde HELP para obtener ayuda, o contáctanos al teléfono o correo de abajo.",
           "Las operadoras no son responsables por mensajes demorados o no entregados.",
+          "Debes tener 18 años o más para suscribirte a los mensajes de texto.",
           "Tu número de celular y tu consentimiento se manejan como se describe en nuestra Política de privacidad, y nunca se comparten con terceros para su marketing.",
         ],
       },

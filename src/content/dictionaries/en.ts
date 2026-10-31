@@ -411,7 +411,7 @@ export const en = {
       },
       smsConsent: "Yes, text me at this number to schedule faster",
       smsDisclosure:
-        "Optional. By checking this box, you agree to receive texts from Elite W&D Installers LLC about your estimate request. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.",
+        "Optional. By checking this box, you agree to receive texts from Elite W&D Installers LLC about your estimate request, such as scheduling, appointment reminders and project updates. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.",
       privacy: "We'll use your information to respond to your request.",
       privacyLink: "Privacy Policy",
       termsLink: "Terms",
@@ -525,6 +525,7 @@ export const en = {
           "Message frequency varies. Message and data rates may apply. Consent to receive texts is not required to request an estimate or buy our services.",
           "Reply STOP at any time to stop receiving messages; we will confirm and send no more texts unless you opt in again. Reply HELP for help, or contact us at the phone number or email below.",
           "Carriers are not liable for delayed or undelivered messages.",
+          "You must be 18 or older to sign up for text messages.",
           "Your mobile number and consent are handled as described in our Privacy Policy, and are never shared with third parties for their marketing.",
         ],
       },
