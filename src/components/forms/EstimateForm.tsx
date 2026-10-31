@@ -148,7 +148,7 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
         </label>
       </div>
 
-      <div className={`${styles.field} ${styles.full}`}>
+      <div className={styles.field}>
         <label htmlFor="name" className={styles.label}>{t.name}</label>
         <input
           id="name"
@@ -164,6 +164,23 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
       </div>
 
       <div className={styles.field}>
+        <label htmlFor="email" className={styles.label}>{t.email}</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          required
+          aria-invalid={errors.email}
+          aria-describedby={describedBy("email")}
+          className={fieldClass("email", styles.input)}
+        />
+        {errors.email && <span id="email-error" className={styles.error}>{t.errors.email}</span>}
+      </div>
+
+      {/* Phone and the SMS opt-in sit together: the moment someone types their number is when
+          texting makes the most sense to them. A2P 10DLC: optional, unchecked by default. */}
+      <div className={`${styles.field} ${styles.full}`}>
         <label htmlFor="phone" className={styles.label}>{t.phone}</label>
         <input
           id="phone"
@@ -177,21 +194,16 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
           className={fieldClass("phone", styles.input)}
         />
         {errors.phone && <span id="phone-error" className={styles.error}>{t.errors.phone}</span>}
-      </div>
-
-      <div className={styles.field}>
-        <label htmlFor="email" className={styles.label}>{t.email}</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-          aria-invalid={errors.email}
-          aria-describedby={describedBy("email")}
-          className={fieldClass("email", styles.input)}
-        />
-        {errors.email && <span id="email-error" className={styles.error}>{t.errors.email}</span>}
+        <label className={styles.consent}>
+          <input type="checkbox" name="smsConsent" value="yes" />
+          <span>
+            <span className={styles.consentLabel}>{t.smsConsent}</span>
+            <span className={styles.privacy}>
+              {t.smsDisclosure} <Link href={href(lang, "privacy")}>{t.privacyLink}</Link> ·{" "}
+              <Link href={href(lang, "terms")}>{t.termsLink}</Link>
+            </span>
+          </span>
+        </label>
       </div>
 
       <div className={styles.field}>
@@ -248,7 +260,8 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
           {status === "sending" ? t.sending : t.submit}
         </Button>
         <p className={styles.privacy}>
-          {t.privacy} <Link href={href(lang, "privacy")}>{t.privacyLink}</Link>
+          {t.privacy} <Link href={href(lang, "privacy")}>{t.privacyLink}</Link> ·{" "}
+          <Link href={href(lang, "terms")}>{t.termsLink}</Link>
         </p>
       </div>
     </form>

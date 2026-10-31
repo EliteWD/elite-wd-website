@@ -73,7 +73,8 @@ export function Footer({ lang, common }: { lang: Locale; common: Dictionary["com
             © {year} {site.name}. {footer.rights}
             {site.registered && site.insured && ` ${footer.registeredInsured}.`}
             {site.license && ` ${footer.license} ${site.license}.`}{" "}
-            <Link href={href(lang, "privacy")}>{footer.privacy}</Link>
+            <Link href={href(lang, "privacy")}>{footer.privacy}</Link> ·{" "}
+            <Link href={href(lang, "terms")}>{footer.terms}</Link>
           </span>
           <Link href={switchLocalePath(href(lang, "home"), otherLang)} hrefLang={otherLang} lang={otherLang}>
             {common.language.switchTo}

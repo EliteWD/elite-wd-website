@@ -42,6 +42,7 @@ export const es: Dictionary = {
       registeredInsured: "Empresa registrada y asegurada",
       rights: "Todos los derechos reservados.",
       privacy: "Política de privacidad",
+      terms: "Términos",
     },
   },
 
@@ -80,6 +81,11 @@ export const es: Dictionary = {
       title: "Política de privacidad",
       description:
         "Cómo Elite W&D Installers LLC recopila, usa y protege la información que compartes a través de elitewdi.com.",
+    },
+    terms: {
+      title: "Términos",
+      description:
+        "Términos de uso de elitewdi.com, de los estimados gratis y de los mensajes de texto de Elite W&D Installers LLC.",
     },
   },
 
@@ -405,9 +411,12 @@ export const es: Dictionary = {
         propertyType: "Elige el tipo de propiedad.",
         timeline: "Elige cuándo te gustaría realizarlo.",
       },
-      privacy:
-        "Usaremos tu información para responder a tu solicitud, incluso por teléfono, mensaje de texto o correo. Pueden aplicar tarifas de mensajes y datos.",
+      smsConsent: "Sí, escríbanme a este número para agendar más rápido",
+      smsDisclosure:
+        "Opcional. Al marcar esta casilla, aceptas recibir mensajes de texto de Elite W&D Installers LLC sobre tu solicitud de estimado. La frecuencia varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar o HELP para ayuda.",
+      privacy: "Usaremos tu información para responder a tu solicitud.",
       privacyLink: "Política de privacidad",
+      termsLink: "Términos",
     },
   },
 
@@ -458,7 +467,7 @@ export const es: Dictionary = {
         title: "Mensajes de texto",
         body: [
           "Si nos das tu número de teléfono, podemos llamarte o enviarte mensajes de texto sobre tu solicitud y tu proyecto. La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. Responde STOP en cualquier momento para dejar de recibir mensajes de texto, o HELP para obtener ayuda.",
-          "No compartimos ni vendemos tu número de celular ni tu consentimiento para recibir mensajes de texto a terceros para sus propios fines de marketing.",
+          "No compartimos ni vendemos tu número de celular ni tu consentimiento para recibir mensajes de texto a terceros para sus propios fines de marketing. No compartiremos información móvil con terceros ni afiliados con fines de marketing o promoción. Los datos de suscripción y el consentimiento para mensajes de texto no se compartirán con ningún tercero.",
         ],
       },
       {
@@ -501,6 +510,48 @@ export const es: Dictionary = {
     contact: {
       title: "Contáctanos",
       body: "¿Preguntas sobre esta política o sobre tu información? Contacta a Elite W&D Installers LLC:",
+    },
+  },
+
+  terms: {
+    label: "Legal",
+    title: "Términos",
+    updated: "Última actualización: 31 de octubre de 2026",
+    intro:
+      "Estos términos aplican cuando usas elitewdi.com, solicitas un estimado o recibes mensajes de texto de Elite W&D Installers LLC (\"nosotros\"). Al usar el sitio, los aceptas.",
+    sections: [
+      {
+        title: "Mensajes de texto (SMS)",
+        body: [
+          "Programa: actualizaciones de estimados de Elite W&D Installers. Si marcas la casilla de mensajes de texto en nuestro formulario de estimado, te escribiremos sobre tu solicitud: para confirmarla, agendar tu estimado en casa y dar seguimiento a tu proyecto. No enviamos mensajes promocionales masivos.",
+          "La frecuencia de los mensajes varía. Pueden aplicar tarifas de mensajes y datos. No es necesario aceptar los mensajes de texto para solicitar un estimado ni para contratar nuestros servicios.",
+          "Responde STOP en cualquier momento para dejar de recibir mensajes; te lo confirmaremos y no te escribiremos más, salvo que vuelvas a suscribirte. Responde HELP para obtener ayuda, o contáctanos al teléfono o correo de abajo.",
+          "Las operadoras no son responsables por mensajes demorados o no entregados.",
+          "Tu número de celular y tu consentimiento se manejan como se describe en nuestra Política de privacidad, y nunca se comparten con terceros para su marketing.",
+        ],
+      },
+      {
+        title: "Estimados",
+        body: [
+          "Los estimados son gratis y sin compromiso. El precio final se entrega por escrito después de medir tus aberturas en persona, y puede cambiar si cambia el alcance del proyecto.",
+        ],
+      },
+      {
+        title: "Contenido del sitio",
+        body: [
+          "Procuramos que la información de este sitio sea correcta, pero los detalles de productos, fotos y descripciones son de referencia general y no forman parte de ningún contrato. Tu propuesta escrita y tu contrato rigen tu proyecto.",
+        ],
+      },
+      {
+        title: "Cambios a estos términos",
+        body: [
+          "Podemos actualizar estos términos de vez en cuando. La fecha al principio indica cuándo se cambiaron por última vez.",
+        ],
+      },
+    ],
+    contact: {
+      title: "Contáctanos",
+      body: "¿Preguntas sobre estos términos o sobre nuestros mensajes de texto? Contacta a Elite W&D Installers LLC:",
     },
   },
 

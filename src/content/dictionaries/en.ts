@@ -40,6 +40,7 @@ export const en = {
       registeredInsured: "Registered & insured",
       rights: "All rights reserved.",
       privacy: "Privacy Policy",
+      terms: "Terms",
     },
   },
 
@@ -78,6 +79,11 @@ export const en = {
       title: "Privacy Policy",
       description:
         "How Elite W&D Installers LLC collects, uses and protects the information you share through elitewdi.com.",
+    },
+    terms: {
+      title: "Terms",
+      description:
+        "Terms of use for elitewdi.com, free estimates and text messages from Elite W&D Installers LLC.",
     },
   },
 
@@ -403,9 +409,12 @@ export const en = {
         propertyType: "Please choose the property type.",
         timeline: "Please choose when you'd like to do it.",
       },
-      privacy:
-        "We'll use your information to respond to your request, including by phone, text or email. Message and data rates may apply.",
+      smsConsent: "Yes, text me at this number to schedule faster",
+      smsDisclosure:
+        "Optional. By checking this box, you agree to receive texts from Elite W&D Installers LLC about your estimate request. Msg frequency varies. Msg & data rates may apply. Reply STOP to opt out, HELP for help.",
+      privacy: "We'll use your information to respond to your request.",
       privacyLink: "Privacy Policy",
+      termsLink: "Terms",
     },
   },
 
@@ -456,7 +465,7 @@ export const en = {
         title: "Text messages",
         body: [
           "If you give us your phone number, we may call or text you about your request and your project. Message frequency varies. Message and data rates may apply. Reply STOP to opt out of text messages at any time, or HELP for help.",
-          "We do not share or sell your mobile phone number or your consent to receive text messages with third parties for their marketing purposes.",
+          "We do not share or sell your mobile phone number or your consent to receive text messages with third parties for their marketing purposes. No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.",
         ],
       },
       {
@@ -499,6 +508,48 @@ export const en = {
     contact: {
       title: "Contact us",
       body: "Questions about this policy or your information? Contact Elite W&D Installers LLC:",
+    },
+  },
+
+  terms: {
+    label: "Legal",
+    title: "Terms",
+    updated: "Last updated: October 31, 2026",
+    intro:
+      "These terms apply when you use elitewdi.com, request an estimate or receive text messages from Elite W&D Installers LLC (\"we\", \"us\"). By using the site, you agree to them.",
+    sections: [
+      {
+        title: "Text messages (SMS)",
+        body: [
+          "Program: Elite W&D Installers estimate updates. If you check the text-message box on our estimate form, we will text you about your request: to confirm it, schedule your in-home estimate and follow up on your project. We do not send promotional blasts.",
+          "Message frequency varies. Message and data rates may apply. Consent to receive texts is not required to request an estimate or buy our services.",
+          "Reply STOP at any time to stop receiving messages; we will confirm and send no more texts unless you opt in again. Reply HELP for help, or contact us at the phone number or email below.",
+          "Carriers are not liable for delayed or undelivered messages.",
+          "Your mobile number and consent are handled as described in our Privacy Policy, and are never shared with third parties for their marketing.",
+        ],
+      },
+      {
+        title: "Estimates",
+        body: [
+          "Estimates are free and without obligation. Final pricing is given in writing after we measure your openings in person, and may change if the scope of the project changes.",
+        ],
+      },
+      {
+        title: "Website content",
+        body: [
+          "We work to keep the information on this site accurate, but product details, photos and descriptions are for general reference and do not form part of any contract. Your written proposal and contract govern your project.",
+        ],
+      },
+      {
+        title: "Changes to these terms",
+        body: [
+          "We may update these terms from time to time. The date at the top shows when they were last changed.",
+        ],
+      },
+    ],
+    contact: {
+      title: "Contact us",
+      body: "Questions about these terms or our text messages? Contact Elite W&D Installers LLC:",
     },
   },
 

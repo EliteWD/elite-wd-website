@@ -88,6 +88,8 @@ export async function POST(request: Request) {
     openings: get("openings"),
     message: get("message"),
     language: get("language") === "es" ? "Español" : "English",
+    // Only "yes" contacts may receive automated texts (A2P 10DLC opt-in).
+    sms_consent: get("smsConsent") === "yes" ? "yes" : "no",
     source: "elitewdi.com – Estimate form",
   };
 
