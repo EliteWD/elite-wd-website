@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { routes } from "@/lib/i18n";
 import { track } from "@/lib/metaPixel";
+import { captureAttribution } from "@/lib/attribution";
 
 const products: Record<string, string> = {
   [routes.windows]: "Impact Windows",
@@ -23,6 +24,7 @@ export function MetaPixelEvents() {
     if (last.current === pathname) return;
     last.current = pathname;
 
+    captureAttribution();
     track("PageView");
     const product = products[pathname.split("/")[2] ?? ""];
     if (product) track("ViewContent", { content_name: product, content_category: "Product page" });

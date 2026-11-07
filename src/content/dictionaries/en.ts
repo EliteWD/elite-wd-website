@@ -446,6 +446,7 @@ export const en = {
         body: [
           "We use the Meta Pixel, a tool from Meta Platforms (Facebook and Instagram), to measure visits and actions on our site, such as viewing a product page, tapping the call button or submitting the estimate form.",
           "We use Meta's automatic advanced matching. When you submit the form, your email address and phone number are converted into a scrambled code (hashed) in your browser before being sent to Meta, which uses them to match the visit with a Meta account. This helps us measure our ads and reach people likely to be interested in our services. Meta does not receive your email or phone in readable form from us.",
+          "If you arrive from one of our Meta ads, we keep the ad's click identifier and the Pixel's browser identifier (a random code, not your name or contact details) in your browser for up to 90 days. When you submit the form we attach them to your request so we can tell which ads led to an appointment or a sale and report that back to Meta.",
           "You can control how Meta uses this information to show you ads in your Meta ad preferences, and you can limit cookies in your browser settings.",
         ],
         links: [

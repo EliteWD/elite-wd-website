@@ -6,6 +6,7 @@ import type { Dictionary } from "@/content/dictionaries/en";
 import { href, type Locale } from "@/lib/i18n";
 import { Button } from "@/components/ui/Button";
 import { track } from "@/lib/metaPixel";
+import { getAttribution } from "@/lib/attribution";
 import styles from "./EstimateForm.module.css";
 
 type Props = {
@@ -90,6 +91,9 @@ export function EstimateForm({ lang, t, cities, endpoint, phone, phoneHref }: Pr
     setStatus("sending");
     try {
       data.delete("company");
+      const { fbclid, fbp } = getAttribution();
+      if (fbclid) data.set("fbclid", fbclid);
+      if (fbp) data.set("fbp", fbp);
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { Accept: "application/json" },

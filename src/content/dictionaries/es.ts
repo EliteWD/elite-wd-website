@@ -448,6 +448,7 @@ export const es: Dictionary = {
         body: [
           "Usamos el Pixel de Meta, una herramienta de Meta Platforms (Facebook e Instagram), para medir visitas y acciones en nuestro sitio, como ver una página de productos, tocar el botón de llamar o enviar el formulario de estimado.",
           "Usamos las coincidencias avanzadas automáticas de Meta. Cuando envías el formulario, tu correo y tu teléfono se convierten en un código cifrado (hash) en tu navegador antes de enviarse a Meta, que los usa para relacionar la visita con una cuenta de Meta. Esto nos ayuda a medir nuestros anuncios y a llegar a personas que probablemente estén interesadas en nuestros servicios. Meta no recibe de nosotros tu correo ni tu teléfono en forma legible.",
+          "Si llegas desde uno de nuestros anuncios de Meta, guardamos en tu navegador, hasta por 90 días, el identificador del clic en el anuncio y el identificador del navegador del Pixel (un código aleatorio, no tu nombre ni tus datos de contacto). Al enviar el formulario los añadimos a tu solicitud para saber qué anuncios llevaron a una cita o a una venta y avisarle a Meta.",
           "Puedes controlar cómo Meta usa esta información para mostrarte anuncios en tus preferencias de anuncios de Meta, y puedes limitar las cookies en la configuración de tu navegador.",
         ],
         links: [

@@ -1,4 +1,5 @@
 import { es } from "@/content/dictionaries/es";
+import { FBCLID_PATTERN, FBP_PATTERN } from "@/lib/attribution";
 
 /**
  * Estimate form relay → GoHighLevel inbound webhook.
@@ -90,6 +91,9 @@ export async function POST(request: Request) {
     language: get("language") === "es" ? "Español" : "English",
     // Only "yes" contacts may receive automated texts (A2P 10DLC opt-in).
     sms_consent: get("smsConsent") === "yes" ? "yes" : "no",
+    // Meta ad identifiers, only if they look genuine; empty otherwise.
+    fbclid: FBCLID_PATTERN.test(get("fbclid")) ? get("fbclid") : "",
+    fbp: FBP_PATTERN.test(get("fbp")) ? get("fbp") : "",
     source: "elitewdi.com – Estimate form",
   };
 
