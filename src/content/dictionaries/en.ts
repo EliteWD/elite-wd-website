@@ -212,6 +212,14 @@ export const en = {
       title: "See what your home could look like.",
       body: "Book a free, no-obligation in-home estimate.",
     },
+    reviews: {
+      title: "What our customers say.",
+      basedOn: "Based on {n} Google reviews",
+      starsLabel: "Rated {n} out of 5",
+      write: "Leave us a review on Google",
+      seeAll: "See all reviews on Google",
+      attribution: "Reviews from Google.",
+    },
     planner: {
       title: "Plan your project in 30 seconds.",
       body: "Three quick questions and your estimate request is ready to send.",

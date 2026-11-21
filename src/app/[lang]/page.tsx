@@ -24,6 +24,7 @@ import {
   Split,
   TrustBar,
 } from "@/components/sections/Sections";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { HeroVideo } from "@/components/visuals/HeroVideo";
 import { heroVideo, images } from "@/content/images";
 
@@ -151,6 +152,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           }
         />
       </Section>
+
+      <GoogleReviews lang={lang} t={home.reviews} />
 
       <Section surface="obsidian" labelledBy="faq-title">
         <SectionHeader id="faq-title" title={home.faq.title} center />

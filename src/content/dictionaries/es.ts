@@ -214,6 +214,14 @@ export const es: Dictionary = {
       title: "Imagina cómo podría verse tu casa.",
       body: "Agenda un estimado gratis y sin compromiso en tu hogar.",
     },
+    reviews: {
+      title: "Lo que dicen nuestros clientes.",
+      basedOn: "Basado en {n} reseñas de Google",
+      starsLabel: "Calificación de {n} de 5",
+      write: "Déjenos una reseña en Google",
+      seeAll: "Ver todas las reseñas en Google",
+      attribution: "Reseñas de Google.",
+    },
     planner: {
       title: "Planifica tu proyecto en 30 segundos.",
       body: "Tres preguntas rápidas y tu solicitud de estimado queda lista para enviar.",
